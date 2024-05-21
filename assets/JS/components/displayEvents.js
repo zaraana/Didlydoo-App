@@ -1,5 +1,5 @@
 import { formatDate } from "./formatDate.js";
-
+import { modifEvent } from "./patch_event.js";
 // Fetches all existing events.
 export const getEvents = async () => {
   const endpoint = "http://localhost:3000/api/events/";
@@ -58,7 +58,7 @@ const displayEvents = (events) => {
     const editButtons = document.querySelectorAll(".edit-button");
     for (let btn of editButtons) {
       btn.addEventListener("click", (e) => {
-        console.log(e.target.id.split("_")[1]);
+        modifEvent(e.target.id.split("_")[1]);
       });
     }
   }
