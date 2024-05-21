@@ -1,16 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script  defer src="assets/JS/script.js" type="module"></script>
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <title>Document</title>
-    </head>
-    <body>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script  defer src="assets/JS/script.js" type="module"></script>
+            <link rel="stylesheet" href="assets/css/styles.css">
+            <title>Document</title>
+        </head>
+        <body>
+        <header>
+        <h1>🅳🅸🅳🅻🆈🅳🅾🅾 - 🅴🆅🅴🅽🆃 🅿🅻🅰🅽🅽🅴🆁</h1>
+        <nav>
+        <ul>
+            <li><button id="add-event"></button></li>
+            <li><button id="home"></button></li>
+            <li><button id="all"></button></li>
+        </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="addEvent_modal">
+            <label for="event_name">Event name : </label>
+            <input type="text" id="event_name">
+
+            <label for="author">Author : </label>
+            <input type="text" id="author">
+
+            <label for="dates">Dates of attendance : </label>
+            <input type="date" id="dates">
+            <button id="add_date">+</button>
+
+            <label for="description">description</label>
+            <input type="text" id="description">
+            <div id="liste_date">
+                
+            </div>
+            <button id="submit_addEvent">submit</button>
+        </div>
         <div class="events-container">
             
         </div>
+    </main>
 
-    </body>
-</html>
+    <footer>
+        <p>&copy; 2021 Didlydoo - Event Planner</p>
+    </footer>
+            
+        </body>
+    </html>
