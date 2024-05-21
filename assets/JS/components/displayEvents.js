@@ -52,7 +52,7 @@ const displayEvents = (events) => {
     const attendeesList = getAttendantsList(event.dates);
     const attendeesDiv = document.createElement("div");
     attendeesDiv.classList.add("attendees-list");
-    attendeesDiv.innerHTML += `<div class="participant">Date</div>`;
+    attendeesDiv.innerHTML += `<div class="participant">Participants</div>`;
     for (let participant of attendeesList) {
       attendeesDiv.innerHTML += `<div class="participant">${participant}</div>`;
     }
@@ -62,8 +62,8 @@ const displayEvents = (events) => {
     // // Creates dates entries
     for (let eventDate of event.dates) {
       const dateDiv = document.createElement("div");
-      dateDiv.classList.add("date");
-      dateDiv.innerHTML = `${eventDate.date}`;
+      dateDiv.classList.add("date-attendance");
+      dateDiv.innerHTML = `<span class="date">${eventDate.date}</span>`;
       attendanceTable.appendChild(dateDiv);
       const attendees = document.createElement("div");
       attendees.classList.add("attendees");
