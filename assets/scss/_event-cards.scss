@@ -1,0 +1,64 @@
+.events-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.card {
+    padding: 5px 30px;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    height : 30vh;
+    width : 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+    .edit-button {
+        display: flex;
+        justify-self: flex-end;
+        &:hover {
+            transform: scale(108%);
+            transition: ease 0.5s;
+            cursor:pointer;
+        }
+    }
+}
+
+.expend {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    img {
+        height:15px;
+        width: 15px;
+        padding-right: 5px;
+    }
+}
+
+.attendance-table {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.attendees {
+    display:flex;
+    flex-direction: row;
+}
