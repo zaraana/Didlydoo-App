@@ -2,6 +2,6 @@
 import { getEvents } from "./components/displayEvents.js";
 // postEvent();
 import { add_event } from "./components/add_event_modal.js";
-add_event();
 
+add_event();
 getEvents();

@@ -10,7 +10,16 @@ export const getEvents = async () => {
   displayEvents(result);
 };
 
+const getAttendantsList = (dateList) => {
+  let attendeesSet = new Set();
+  for (let date of dateList) {
+    date.attendees.forEach((attendee) => attendeesSet.add(attendee.name));
+  }
+  return [...attendeesSet];
+};
+
 const toggleAttendance = (event, destination) => {
+  getAttendantsList(event.dates);
   const attendanceTable = document.createElement("div");
   attendanceTable.classList.add("attendance-table");
   // Creates dates entries
@@ -39,7 +48,6 @@ const displayEvents = (events) => {
   const container = document.querySelector(".events-container");
   container.innerHTML = "";
   for (let event of events) {
-    console.log(event);
     const card = document.createElement("div");
     card.classList.add("card");
     const createdDate = formatDate(event.created_at);

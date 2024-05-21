@@ -83,5 +83,5 @@ main div#addEvent_modal {
 
 .attendees {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
