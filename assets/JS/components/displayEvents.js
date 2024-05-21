@@ -1,11 +1,38 @@
 import { formatDate } from "./formatDate.js";
 
+// Fetches all existing events.
 export const getEvents = async () => {
   const endpoint = "http://localhost:3000/api/events/";
   const response = await fetch(endpoint);
   const result = await response.json();
 
+  // display the events to the page
   displayEvents(result);
+};
+
+const toggleAttendance = (event, destination) => {
+  const attendanceTable = document.createElement("div");
+  attendanceTable.classList.add("attendance-table");
+  // Creates dates entries
+  for (let eventDate of event.dates) {
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("date");
+    dateDiv.innerHTML = `${eventDate.date}`;
+    attendanceTable.appendChild(dateDiv);
+    const attendees = document.createElement("div");
+    attendees.classList.add("attendees");
+    for (let attendant of eventDate.attendees) {
+      if (attendant.available === null) {
+        continue;
+      } else {
+        attendees.innerHTML += `<div class="attendee">
+        ${attendant.name}
+        </div>`;
+      }
+      dateDiv.appendChild(attendees);
+    }
+  }
+  destination.appendChild(attendanceTable);
 };
 
 const displayEvents = (events) => {
@@ -17,22 +44,22 @@ const displayEvents = (events) => {
     card.classList.add("card");
     const createdDate = formatDate(event.created_at);
     card.innerHTML = `
-        <h3>${event.name}</h3>
-        <button id="edit_${event.id}" class="edit-button">Edit</button>
+        <div class="controls"><h3>${event.name}</h3><img src="assets/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event"></div>
+        
         <div class="event-info">
-            <span class="author">by ${event.author}</span><span class="creation-date"> on ${createdDate}</span>
+            <span class="author">created by ${event.author}</span><span class="creation-date"> on ${createdDate}</span>
         </div>
         <p class="description">${event.description}</p>
+        <div class="expend" id="expend"><img src="assets/more.svg" alt="See attendance">See attendance</div>
     `;
-    const datesDiv = document.createElement("div");
-    for (let eventDate of event.dates) {
-      datesDiv.innerHTML += `
-        <div class="date">
-        ${eventDate.date}
-        </div>`;
-    }
-    card.appendChild(datesDiv);
     container.appendChild(card);
+    toggleAttendance(event, card);
+
+    const editButtons = document.querySelectorAll(".edit-button");
+    for (let btn of editButtons) {
+      btn.addEventListener("click", (e) => {
+        console.log(e.target.id.split("_")[1]);
+      });
+    }
   }
-  const editButtons = document.querySelectorAll(".edit-button");
 };
