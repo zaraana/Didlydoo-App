@@ -1,5 +1,5 @@
 import { formatDate } from "./formatDate.js";
-
+import { modifEvent } from "./patch_event.js";
 // Fetches all existing events.
 export const getEvents = async () => {
   const endpoint = "http://localhost:3000/api/events/";
