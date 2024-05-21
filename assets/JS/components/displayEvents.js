@@ -18,30 +18,16 @@ const getAttendantsList = (dateList) => {
   return [...attendeesSet];
 };
 
-const toggleAttendance = (event, destination) => {
-  getAttendantsList(event.dates);
-  const attendanceTable = document.createElement("div");
-  attendanceTable.classList.add("attendance-table");
-  // Creates dates entries
-  for (let eventDate of event.dates) {
-    const dateDiv = document.createElement("div");
-    dateDiv.classList.add("date");
-    dateDiv.innerHTML = `${eventDate.date}`;
-    attendanceTable.appendChild(dateDiv);
-    const attendees = document.createElement("div");
-    attendees.classList.add("attendees");
-    for (let attendant of eventDate.attendees) {
-      if (attendant.available === null) {
-        continue;
-      } else {
-        attendees.innerHTML += `<div class="attendee">
-        ${attendant.name}
-        </div>`;
-      }
-      dateDiv.appendChild(attendees);
-    }
+const toggleDetails = (id) => {
+  const div = document.querySelector(`#details_${id}`);
+  const toggleDiv = document.querySelector(`#expend_${id}`);
+  if (div.style.display === "none") {
+    div.style.display = "flex";
+    toggleDiv.innerHTML = `<img src="assets/images/less.svg" id="expend_${id}" alt="Hide details">Hide attendance`;
+  } else {
+    div.style.display = "none";
+    toggleDiv.innerHTML = `<img src="assets/images/more.svg" id="expend_${id}" alt="See details">View attendance`;
   }
-  destination.appendChild(attendanceTable);
 };
 
 const displayEvents = (events) => {
@@ -52,22 +38,63 @@ const displayEvents = (events) => {
     card.classList.add("card");
     const createdDate = formatDate(event.created_at);
     card.innerHTML = `
-        <div class="controls"><h3>${event.name}</h3><img src="assets/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event"></div>
+        <div class="controls"><h3>${event.name}</h3><img src="assets/images/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event"></div>
         
         <div class="event-info">
             <span class="author">created by ${event.author}</span><span class="creation-date"> on ${createdDate}</span>
         </div>
         <p class="description">${event.description}</p>
-        <div class="expend" id="expend"><img src="assets/more.svg" alt="See attendance">See attendance</div>
+        <div style="display: none;" class="attendance-table" id="details_${event.id}">
+        </div>
+        <div class="toggle-attendance" id="expend_${event.id}"><img id="expend_${event.id}" src="assets/images/more.svg" alt="View attendance">View attendance</div>
     `;
-    container.appendChild(card);
-    toggleAttendance(event, card);
 
-    const editButtons = document.querySelectorAll(".edit-button");
-    for (let btn of editButtons) {
-      btn.addEventListener("click", (e) => {
-        console.log(e.target.id.split("_")[1]);
-      });
+    const attendeesList = getAttendantsList(event.dates);
+    const attendeesDiv = document.createElement("div");
+    attendeesDiv.classList.add("attendees-list");
+    attendeesDiv.innerHTML += `<div class="participant">Date</div>`;
+    for (let participant of attendeesList) {
+      attendeesDiv.innerHTML += `<div class="participant">${participant}</div>`;
     }
+    container.appendChild(card);
+    const attendanceTable = document.querySelector(`#details_${event.id}`);
+    attendanceTable.appendChild(attendeesDiv);
+    // // Creates dates entries
+    for (let eventDate of event.dates) {
+      const dateDiv = document.createElement("div");
+      dateDiv.classList.add("date");
+      dateDiv.innerHTML = `${eventDate.date}`;
+      attendanceTable.appendChild(dateDiv);
+      const attendees = document.createElement("div");
+      attendees.classList.add("attendees");
+      for (let attendant of eventDate.attendees) {
+        if (attendant.available === null) {
+          attendees.innerHTML += `<div class="attendance">
+          <img src="assets/images/question.svg" alt="no data">
+          </div>`;
+        } else if (!attendant.available) {
+          attendees.innerHTML += `<div class="attendance">
+          <img src="assets/images/cross.svg" alt="not attending">
+          </div>`;
+        } else {
+          attendees.innerHTML += `<div class="attendance">
+          <img src="assets/images/confirm.svg" alt="attending">
+          </div>`;
+        }
+        dateDiv.appendChild(attendees);
+      }
+    }
+  }
+  const toggleButtons = document.querySelectorAll(".toggle-attendance");
+  for (let toggleBtn of toggleButtons) {
+    toggleBtn.addEventListener("click", (e) => {
+      toggleDetails(e.target.id.split("_")[1]);
+    });
+  }
+  const editButtons = document.querySelectorAll(".edit-button");
+  for (let editBtn of editButtons) {
+    editBtn.addEventListener("click", (e) => {
+      console.log(e.target.id.split("_")[1]);
+    });
   }
 };

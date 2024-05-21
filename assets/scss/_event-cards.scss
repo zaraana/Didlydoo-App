@@ -1,9 +1,11 @@
 .events-container {
+    margin: 5vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vh;
+    gap: 4vh;
+    width: 100%;
 }
 
 .card {
@@ -47,18 +49,36 @@
 }
 
 .attendance-table {
-    display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 15px;
+    transition: ease 1s;
+    & > * {
+        flex:1;
+    }
 }
 
 .date {
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex:1;
+}
+
+.attendees-list {
+    font-weight: bold;
 }
 
 .attendees {
     display:flex;
     flex-direction: column;
+}
+
+.toggle-attendance {
+    display: flex;
+    justify-self: flex-end;
+    img {
+        height: 17px;
+        width: 17px;
+        padding-right: 5px;
+    }
 }
