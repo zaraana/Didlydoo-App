@@ -1,5 +1,6 @@
 import { modifEvent } from "./patch_event.js";
 import { affiche_dateListe } from "./afficheModalDateList.js";
+
 export function modifModal(id,prefill){
 
     const modifName = document.getElementById('modif_name');
@@ -34,6 +35,6 @@ export function modifModal(id,prefill){
     })
 
 
-    modifEvent(id);
+    modifEvent(id,tab_newDate);
 
 }
