@@ -100,7 +100,7 @@ const displayEvents = (events) => {
   const editButtons = document.querySelectorAll(".edit-button");
   for (let editBtn of editButtons) {
     editBtn.addEventListener("click", (e) => {
-      console.log(e.target.id.split("_")[1]);
+      modifEvent(e.target.id.split("_")[1]);
     });
   }
   const deleteButtons = document.querySelectorAll(".delete-button");
