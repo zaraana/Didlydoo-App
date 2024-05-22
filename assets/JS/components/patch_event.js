@@ -8,9 +8,9 @@ export function modifEvent(id){
     submitModif.addEventListener('click',event=>{
 
         const updates = {
-            name: modifName,
-            author: modifAuthor,
-            description: modifDescription
+            name: modifName.value,
+            author: modifAuthor.value,
+            description: modifDescription.value
           };
         
           updateEvent(id, updates)
@@ -21,7 +21,7 @@ export function modifEvent(id){
             .catch(error => console.error(error));
         
         async function updateEvent(id, updates) {
-          const response = await fetch(`http://localhost:3000/api/events/_${id}`, {
+          const response = await fetch(`http://localhost:3000/api/events/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
