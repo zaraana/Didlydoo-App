@@ -45,7 +45,7 @@
             <div id="liste_date">
                 
             </div>
-            <button id="submit_addEvent">submit</button>
+            <button id="submit_addEvent" type="button">submit</button>
         </div>
 <!-- ============================================ list des events ============================================ -->
         <div class="events-container">
@@ -62,6 +62,13 @@
 
             <label for="modif_description">Description:</label>
             <input type="text" id="modif_description" maxlength="1000">
+
+            <label for="add_date">Dates of attendance : </label>
+            <input type="date" id="add_newDate">
+            <button id="add_dateButton" type="button">+</button>
+            <div id="dates_added">
+                
+            </div>
 
             <button id="updateButton">submit</button>
         </div>

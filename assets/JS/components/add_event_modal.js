@@ -1,4 +1,5 @@
 import { postEvent } from "./post_event.js";
+import { affiche_dateListe } from "./afficheModalDateList.js";
 
 const event_modal = document.getElementById('addEvent_modal');
 const addEvent_button = document.getElementById('add-event');
@@ -30,35 +31,7 @@ export function add_event(){
         input_date.value='';
 
         //affiche la list des date avc une fct pour supp
-        affiche_dateListe();
-
-        function affiche_dateListe(){
-            date_list.innerHTML='';
-            tab.forEach((element,index) => {
-
-                const div = document.createElement('div');
-                
-                const p_date = document.createElement('p');
-                p_date.textContent=element;
-
-                const supp = document.createElement('button');
-                supp.textContent='X';
-    
-                div.appendChild(p_date);
-                div.appendChild(supp);
-    
-                supp.addEventListener('click', event => {
-                    div.remove(); 
-                    
-                    tab = tab.filter(item => item !== element);
-                    affiche_dateListe();
-                });
-
-                date_list.appendChild(div);
-    
-            });
-
-        }
+        affiche_dateListe(tab,date_list);
 
     })
 
