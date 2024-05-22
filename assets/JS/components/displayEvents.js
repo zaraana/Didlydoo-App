@@ -1,6 +1,7 @@
 import { formatDate } from "./formatDate.js";
 import { modifModal } from "./modifModal.js";
 import { toggleDeleteModal } from "./deleteEvent.js";
+import { toggleAttendanceModal } from "./attendantsManager.js";
 // Fetches all existing events.
 export const getEvents = async () => {
   const endpoint = "http://localhost:3000/api/events/";
@@ -55,7 +56,6 @@ const displayEvents = (events) => {
         </div>
         <div class="toggle-attendance" id="expend_${event.id}"><img id="expend_${event.id}" src="assets/images/more.svg" alt="View attendance">View participants</div>
     `;
-
     const attendeesList = getAttendantsList(event.dates);
     const attendeesDiv = document.createElement("div");
     attendeesDiv.classList.add("attendees-list");
@@ -91,6 +91,10 @@ const displayEvents = (events) => {
         dateDiv.appendChild(attendees);
       }
     }
+    const attendBtn = document.createElement("div");
+    attendBtn.classList.add("sign-up");
+    attendBtn.innerHTML = `<button class="attend-button" type="submit" id="sign-up_${event.id}">Sign up</button>`;
+    attendeesDiv.appendChild(attendBtn);
   }
   const toggleButtons = document.querySelectorAll(".toggle-attendance");
   for (let toggleBtn of toggleButtons) {
@@ -111,6 +115,12 @@ const displayEvents = (events) => {
   for (let deleteBtn of deleteButtons) {
     deleteBtn.addEventListener("click", (e) => {
       toggleDeleteModal(e.target.id.split("_")[1]);
+    });
+  }
+  const signUpBtns = document.querySelectorAll(".attend-button");
+  for (let signUpBtn of signUpBtns) {
+    signUpBtn.addEventListener("click", (e) => {
+      toggleAttendanceModal(e.target.id.split("_")[1]);
     });
   }
 };

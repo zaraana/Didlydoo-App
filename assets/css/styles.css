@@ -215,6 +215,20 @@ footer {
   width: 25px;
 }
 
+.sign-up {
+  display: block;
+}
+.sign-up button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "Poppins", sans-serif;
+}
+.sign-up button:hover {
+  transform: scale(105%);
+  transition: ease 0.5s;
+}
+
 .modal-container {
   display: flex;
   align-items: center;
