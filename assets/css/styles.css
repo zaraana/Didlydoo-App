@@ -2,6 +2,62 @@
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: rgb(229, 229, 231);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(242, 242, 243) 100%);
+  border-radius: 2rem;
+}
+
+header {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+header section {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 10px;
+}
+header section .logo {
+  padding: 10px;
+  width: 50px;
+  height: 40px;
+}
+header section h1 {
+  font-size: 20px;
+}
+header section p {
+  font-size: 12px;
+}
+header section .darkMode {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  margin-left: 200px;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-right: 20px;
+}
+header nav ul button {
+  background-color: #e4e3e5;
+  border-radius: 2rem;
+  border: none;
+  padding: 3px 10px;
+  color: #97959d;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+header nav ul button:hover {
+  background-color: #a4a3aa;
+  transition: 1.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -19,6 +75,17 @@ main div#addEvent_modal {
   color: white;
   width: 40vw;
   height: 40vh;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
 }
 
 .events-container {
@@ -84,4 +151,4 @@ main div#addEvent_modal {
 .attendees {
   display: flex;
   flex-direction: row;
-}/*# sourceMappingURL=styles.css.map */
+}
