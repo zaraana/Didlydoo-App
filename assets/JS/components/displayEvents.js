@@ -1,5 +1,6 @@
 import { formatDate } from "./formatDate.js";
 import { modifModal } from "./modifModal.js";
+import { toggleDeleteModal } from "./deleteEvent.js";
 // Fetches all existing events.
 export const getEvents = async () => {
   const endpoint = "http://localhost:3000/api/events/";
@@ -100,13 +101,16 @@ const displayEvents = (events) => {
   const editButtons = document.querySelectorAll(".edit-button");
   for (let editBtn of editButtons) {
     editBtn.addEventListener("click", (e) => {
-      modifModal(e.target.id.split("_")[1],events.filter(object => object.id === e.target.id.split("_")[1]));
+      modifModal(
+        e.target.id.split("_")[1],
+        events.filter((object) => object.id === e.target.id.split("_")[1])
+      );
     });
   }
   const deleteButtons = document.querySelectorAll(".delete-button");
   for (let deleteBtn of deleteButtons) {
     deleteBtn.addEventListener("click", (e) => {
-      console.log(e.target.id.split("_")[1]);
+      toggleDeleteModal(e.target.id.split("_")[1]);
     });
   }
 };
