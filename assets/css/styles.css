@@ -1,5 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(229, 229, 231);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(242, 242, 243) 100%);
+  border-radius: 2rem;
+}
+
+header {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+header section {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 10px;
+}
+header section .logo {
+  padding: 10px;
+  width: 50px;
+  height: 40px;
+}
+header section h1 {
+  font-size: 20px;
+}
+header section p {
+  font-size: 12px;
+}
+header section .darkMode {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  margin-left: 200px;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-right: 20px;
+}
+header nav ul button {
+  background-color: #e4e3e5;
+  border-radius: 2rem;
+  border: none;
+  padding: 3px 10px;
+  color: #97959d;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+header nav ul button:hover {
+  background-color: #a4a3aa;
+  transition: 1.2s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 main {
@@ -21,38 +82,55 @@ main div#addEvent_modal {
   height: 40vh;
 }
 
+footer {
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
 .events-container {
+  margin: 5vh 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
+  gap: 4vh;
+  width: 100%;
 }
 
 .card {
   padding: 5px 30px;
   display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
   flex-direction: column;
   gap: 4px;
   border: 1px solid rgb(203, 201, 201);
   border-radius: 15px;
   box-sizing: border-box;
   overflow: auto;
-  height: 30vh;
+  min-height: 30vh;
   width: 90%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.controls {
+.card-title {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 1px;
 }
-.controls .edit-button {
+.card-title .controls {
   display: flex;
   justify-self: flex-end;
+  gap: 20px;
 }
-.controls .edit-button:hover {
+.card-title .controls > *:hover {
   transform: scale(108%);
   transition: ease 0.5s;
   cursor: pointer;
@@ -70,18 +148,50 @@ main div#addEvent_modal {
 }
 
 .attendance-table {
-  display: flex;
+  margin-top: 1vh;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  padding: 2px;
   flex-direction: row;
-  gap: 5px;
+  gap: 15px;
+  transition: ease 1s;
 }
-
-.date {
-  display: flex;
-  flex-direction: column;
+.attendance-table > * {
   flex: 1;
 }
 
-.attendees {
+.date-attendance {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  flex: 1;
+}
+.date-attendance:first-child {
+  font-weight: bold;
+}
+.date-attendance .date {
+  font-weight: bold;
+}
+
+.attendees-list {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.toggle-attendance {
+  display: flex;
+  justify-self: flex-end;
+}
+.toggle-attendance img {
+  height: 17px;
+  width: 17px;
+  padding-right: 5px;
+}
+
+.attendance > img {
+  height: 25px;
+  width: 25px;
 }/*# sourceMappingURL=styles.css.map */
