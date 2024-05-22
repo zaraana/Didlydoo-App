@@ -1,8 +1,11 @@
 export function post_newDate(tab,id){// Define your API endpoint
+    console.log(id);
     const url = `http://localhost:3000/api/events/${id}/add_dates`;
     
     // Define the data you want to send
-    let data = {tab};
+    let data = {
+        dates : tab
+    };
     
     // Convert the data to a JSON string
     let body = JSON.stringify(data);

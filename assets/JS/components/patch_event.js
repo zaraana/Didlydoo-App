@@ -38,6 +38,6 @@ export function modifEvent(id,tab){
           return response.json();
           }
 
-          post_newDate(id,tab);
+          post_newDate(tab,id);
     })
 }
