@@ -38,7 +38,13 @@ const displayEvents = (events) => {
     card.classList.add("card");
     const createdDate = formatDate(event.created_at);
     card.innerHTML = `
-        <div class="controls"><h3>${event.name}</h3><img src="assets/images/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event"></div>
+        <div class="card-title">
+        <h3>${event.name}</h3>
+        <div class="controls">
+        <img src="assets/images/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event">  
+        <img src="assets/images/delete.svg" id="delete_${event.id}" class="delete-button" alt="delete event">
+        </div>
+        </div>
         
         <div class="event-info">
             <span class="author">created by ${event.author}</span><span class="creation-date"> on ${createdDate}</span>
@@ -70,15 +76,15 @@ const displayEvents = (events) => {
       for (let attendant of eventDate.attendees) {
         if (attendant.available === null) {
           attendees.innerHTML += `<div class="attendance">
-          <img src="assets/images/question.svg" alt="no data">
+          <img class="attendance" src="assets/images/question.svg" alt="no data">
           </div>`;
         } else if (!attendant.available) {
           attendees.innerHTML += `<div class="attendance">
-          <img src="assets/images/cross.svg" alt="not attending">
+          <img class="attendance" src="assets/images/cross.svg" alt="not attending">
           </div>`;
         } else {
           attendees.innerHTML += `<div class="attendance">
-          <img src="assets/images/confirm.svg" alt="attending">
+          <img class="attendance" src="assets/images/confirm.svg" alt="attending">
           </div>`;
         }
         dateDiv.appendChild(attendees);
@@ -94,6 +100,12 @@ const displayEvents = (events) => {
   const editButtons = document.querySelectorAll(".edit-button");
   for (let editBtn of editButtons) {
     editBtn.addEventListener("click", (e) => {
+      console.log(e.target.id.split("_")[1]);
+    });
+  }
+  const deleteButtons = document.querySelectorAll(".delete-button");
+  for (let deleteBtn of deleteButtons) {
+    deleteBtn.addEventListener("click", (e) => {
       console.log(e.target.id.split("_")[1]);
     });
   }
