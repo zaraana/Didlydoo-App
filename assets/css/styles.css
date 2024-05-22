@@ -82,6 +82,24 @@ main div#addEvent_modal {
   width: 40vw;
   height: 40vh;
 }
+main div#modifyEvent {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 15px;
+  box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 40vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+}
 
 footer {
   text-align: center;
