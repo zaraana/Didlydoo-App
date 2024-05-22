@@ -1,136 +1,15 @@
 [
   {
-    "id": "7a0d1626275b",
-    "name": "dwqdqwd",
-    "author": "dwqdq",
-    "description": "dwqdqd",
+    "id": "109dd6acfa99",
+    "name": "pas mon annif",
+    "author": "caro",
+    "description": "dzdzdzdaz",
     "dates": [
-      "2024-05-22"
+      "2024-05-29"
     ],
-    "created_at": "2024-05-21T14:20:53.395Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T14:20:53.395Z",
-    "attendees": []
-  },
-  {
-    "id": "7cbcda17b6c1",
-    "name": "Something",
-    "author": "caroline",
-    "description": "Something?",
-    "dates": [
-      "2024-05-14",
-      "2024-05-24"
-    ],
-    "created_at": "2024-05-21T14:14:25.765Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T14:14:25.765Z",
-    "attendees": []
-  },
-  {
-    "id": "0a5d130bfd1f",
-    "name": "dawdad",
-    "author": "dwadad",
-    "description": "dwadad",
-    "dates": [
-      "2024-05-30"
-    ],
-    "created_at": "2024-05-21T13:56:55.970Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:56:55.970Z",
-    "attendees": []
-  },
-  {
-    "id": "c3601c67d40a",
-    "name": "putain",
-    "author": "caroline",
-    "description": "putain",
-    "dates": [
-      "2024-05-22",
-      "2024-05-23"
-    ],
-    "created_at": "2024-05-21T13:55:02.224Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:55:02.224Z",
-    "attendees": []
-  },
-  {
-    "id": "431efea31ba9",
-    "name": "mon annif",
-    "author": "iliess",
-    "description": "finish inscription",
-    "dates": [
-      "2024-06-14"
-    ],
-    "created_at": "2024-05-21T13:52:50.999Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:52:50.999Z",
-    "attendees": []
-  },
-  {
-    "id": "768868401791",
-    "name": "Event Name",
-    "author": "Author Name",
-    "description": "Description of the event",
-    "dates": [
-      "2024-05-21",
-      "2024-05-22"
-    ],
-    "created_at": "2024-05-21T13:52:35.387Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:52:35.387Z",
-    "attendees": []
-  },
-  {
-    "id": "f9bb4736b90c",
-    "name": "Event Name",
-    "author": "Author Name",
-    "description": "Description of the event",
-    "dates": [
-      "2024-05-21",
-      "2024-05-22"
-    ],
-    "created_at": "2024-05-21T13:52:03.157Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:52:03.157Z",
-    "attendees": []
-  },
-  {
-    "id": "4e88713df79d",
-    "name": "Event Name",
-    "author": "Author Name",
-    "description": "Description of the event",
-    "dates": [
-      "2024-05-21",
-      "2024-05-22"
-    ],
-    "created_at": "2024-05-21T13:52:03.148Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:52:03.148Z",
-    "attendees": []
-  },
-  {
-    "id": "64f42d135b31",
-    "name": "mon annif",
-    "author": "iliess",
-    "description": "dwdadadaw",
-    "dates": [],
-    "created_at": "2024-05-21T13:52:02.670Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T13:52:02.670Z",
-    "attendees": []
-  },
-  {
-    "id": "c0f4f5b53c0c",
-    "name": "Event Name",
-    "author": "Author Name",
-    "description": "Description of the event",
-    "dates": [
-      "2024-05-21",
-      "2024-05-22"
-    ],
-    "created_at": "2024-05-21T09:22:23.795Z",
-    "num_modification": 0,
-    "last_modification": "2024-05-21T09:22:23.795Z",
+    "created_at": "2024-05-21T19:29:06.819Z",
+    "num_modification": 1,
+    "last_modification": "2024-05-22T08:14:43.292Z",
     "attendees": []
   },
   {
