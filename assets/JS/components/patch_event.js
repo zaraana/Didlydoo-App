@@ -1,4 +1,6 @@
-export function modifEvent(id){
+import { post_newDate } from "./post_newDate.js";
+
+export function modifEvent(id,tab){
     
     const modifName = document.getElementById('modif_name');
     const modifAuthor = document.getElementById('modif_author');
@@ -36,6 +38,6 @@ export function modifEvent(id){
           return response.json();
           }
 
+          post_newDate(tab,id);
     })
-    
 }

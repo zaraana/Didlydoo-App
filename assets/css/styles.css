@@ -74,6 +74,7 @@ main div#addEvent_modal {
   position: absolute;
   flex-direction: column;
   justify-content: center;
+  z-index: 10;
   align-items: center;
   background-color: #242424;
   border-radius: 15px;
