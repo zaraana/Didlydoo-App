@@ -24,10 +24,10 @@ const toggleDetails = (id) => {
   const toggleDiv = document.querySelector(`#expend_${id}`);
   if (div.style.display === "none") {
     div.style.display = "flex";
-    toggleDiv.innerHTML = `<img src="assets/images/less.svg" id="expend_${id}" alt="Hide details">Hide attendance`;
+    toggleDiv.innerHTML = `<img src="assets/images/less.svg" id="expend_${id}" alt="Hide details">Hide participants`;
   } else {
     div.style.display = "none";
-    toggleDiv.innerHTML = `<img src="assets/images/more.svg" id="expend_${id}" alt="See details">View attendance`;
+    toggleDiv.innerHTML = `<img src="assets/images/more.svg" id="expend_${id}" alt="See details">View participants`;
   }
 };
 
@@ -53,7 +53,7 @@ const displayEvents = (events) => {
         <p class="description">${event.description}</p>
         <div style="display: none;" class="attendance-table" id="details_${event.id}">
         </div>
-        <div class="toggle-attendance" id="expend_${event.id}"><img id="expend_${event.id}" src="assets/images/more.svg" alt="View attendance">View attendance</div>
+        <div class="toggle-attendance" id="expend_${event.id}"><img id="expend_${event.id}" src="assets/images/more.svg" alt="View attendance">View participants</div>
     `;
 
     const attendeesList = getAttendantsList(event.dates);

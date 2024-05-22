@@ -27,16 +27,14 @@ export const toggleDeleteModal = (eventId) => {
       modalContainer.remove();
     });
   }
+
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target !== deleteModal) {
+      modalContainer.remove();
+    }
+  });
   const deleteBtn = document.querySelector("#deleteConfirm");
-  //   console.log("don't delete straight away !");
-  //   //   div.innerHTML = ``;
   deleteBtn.addEventListener("click", () => {
     deleteEvent(eventId);
   });
-  //   if (confirmed) {
-  //     console.log("delete the event!");
-  //     // deleteEvent(eventId);
-  //   } else {
-  //     console.log("just don't");
-  //   }
 };
