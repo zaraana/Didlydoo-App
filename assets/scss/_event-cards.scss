@@ -47,7 +47,7 @@
 .participant {
     display:flex; 
     align-items: center;
-    border-bottom: 1px solid grey;
+    // border-bottom: 1px solid rgb(206, 206, 206);
     height: 25px;
     box-sizing: border-box;
     img {
@@ -57,14 +57,18 @@
 
 .attendance {
     max-height: 25px;
+    min-width: 25px;
+    text-align: center;
+    // font-weight:bold;
+    color:white;
     box-sizing: border-box;
     width: 100%;
-    border-bottom: 1px solid grey;
+    // border-bottom: 1px solid rgb(206, 206, 206);
 }
 
 .col-title {
     height: 60px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(206, 206, 206);
 }
 
 .expend {
@@ -75,6 +79,7 @@
         height:15px;
         width: 15px;
         padding-right: 5px;
+        text-justify:center;
     }
 }
 
@@ -87,7 +92,6 @@
     overflow-x:auto;
     > * {
         padding: 0 5px;
-        border: 1px solid rgb(206, 206, 206);
     }
 }
 
@@ -106,7 +110,7 @@
 
 .event-info {
     font-style:italic;
-    color: rgb(121, 120, 120);
+    color: grey;
     font-size: 14px;
     margin-bottom: .5em;
 }
@@ -132,9 +136,9 @@
     justify-content:center;
     button {
         font-weight:bold;
-        margin-top: .8em;
+        margin: .8em 0;
         padding: 5px 10px;
-        border: 1px solid black;
+        border: 1px solid grey;
         border-radius: 10px;
         background-color: rgba(255,255,255,0);
         font-family: $poppins;
