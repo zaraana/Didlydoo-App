@@ -38,6 +38,8 @@ export function modifEvent(id,tab){
           return response.json();
           }
 
-          post_newDate(tab,id);
+          if(tab.length>0){
+            post_newDate(tab,id);
+          }
     })
 }
