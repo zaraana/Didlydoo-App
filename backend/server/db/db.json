@@ -1,16 +1,26 @@
 [
   {
-    "id": "109dd6acfa99",
-    "name": "pas mon annif",
-    "author": "caro",
-    "description": "dzdzdzdaz",
+    "id": "843f7a67aa38",
+    "name": "Something",
+    "author": "caroline",
+    "description": "Something?",
     "dates": [
-      "2024-05-29"
+      "2024-05-23"
     ],
-    "created_at": "2024-05-21T19:29:06.819Z",
-    "num_modification": 1,
-    "last_modification": "2024-05-22T08:14:43.292Z",
-    "attendees": []
+    "created_at": "2024-05-23T07:25:10.496Z",
+    "num_modification": 0,
+    "last_modification": "2024-05-23T07:25:10.496Z",
+    "attendees": [
+      {
+        "name": "Zahra",
+        "dates": [
+          {
+            "date": "2024-05-23",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "f5b6564b5dc4",
@@ -21,7 +31,8 @@
       "2022-03-17",
       "2022-03-18",
       "2022-03-21",
-      "2022-03-22"
+      "2022-03-22",
+      "2024-06-14"
     ],
     "attendees": [
       {
@@ -29,15 +40,23 @@
         "dates": [
           {
             "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
             "available": false
           },
           {
-            "date": "2022-03-21",
+            "date": "2022-03-18",
             "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": false
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
+            "available": false
           }
         ]
       },
@@ -46,18 +65,30 @@
         "dates": [
           {
             "date": "2022-03-17",
-            "available": false
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
           },
           {
             "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
             "available": true
           }
         ]
       }
     ],
     "created_at": "2021-11-15T00:00",
-    "num_modification": 3,
-    "last_modification": "2021-11-15T02:15"
+    "num_modification": 13,
+    "last_modification": "2024-05-22T14:21:40.223Z"
   },
   {
     "id": "38b643aeb883",

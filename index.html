@@ -31,21 +31,21 @@
     <main>
         <div id="addEvent_modal">
             <label for="event_name">Event name : </label>
-            <input type="text" id="event_name">
+            <input type="text" id="event_name" maxlength="250">
 
             <label for="author">Author : </label>
-            <input type="text" id="author">
+            <input type="text" id="author" maxlength="10">
 
             <label for="dates">Dates of attendance : </label>
             <input type="date" id="dates">
             <button id="add_date">+</button>
 
             <label for="description">description</label>
-            <input type="text" id="description">
+            <input type="text" id="description" maxlength="1000">
             <div id="liste_date">
                 
             </div>
-            <button id="submit_addEvent">submit</button>
+            <button id="submit_addEvent" type="button">submit</button>
         </div>
 <!-- ============================================ list des events ============================================ -->
         <div class="events-container">
@@ -53,14 +53,24 @@
         </div>
 <!-- ============================== modify event modale ==============================  -->
         <div id="modifyEvent">
-            <h2>Event Information</h2>
-            <label for="modif_name">Name:</label><br>
-            <input type="text" id="modif_name"><br>
-            <label for="modif_author">Author:</label><br>
-            <input type="text" id="modif_author" ><br>
-            <label for="modif_description">Description:</label><br>
-            <input type="text" id="modif_description" ><br>
-            <button id="updateButton">Update Event</button>
+            <h2>modify info</h2>
+            <label for="modif_name">Name:</label>
+            <input type="text" id="modif_name" maxlength="250">
+
+            <label for="modif_author">Author:</label>
+            <input type="text" id="modif_author" maxlength="10" >
+
+            <label for="modif_description">Description:</label>
+            <input type="text" id="modif_description" maxlength="1000">
+
+            <label for="add_date">Dates of attendance : </label>
+            <input type="date" id="add_newDate">
+            <button id="add_dateButton" type="button">+</button>
+            <div id="dates_added">
+                
+            </div>
+
+            <button id="updateButton">submit</button>
         </div>
   
     </main>

@@ -7,6 +7,7 @@ body {
 <<<<<<< HEAD
 =======
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 }
 
 header {
-  margin-top: 30px;
+  padding-top: 30px;
   margin-left: 30px;
 }
 header section {
@@ -76,6 +77,7 @@ main div#addEvent_modal {
   position: absolute;
   flex-direction: column;
   justify-content: center;
+  z-index: 10;
   align-items: center;
   background-color: #242424;
   border-radius: 15px;
@@ -83,6 +85,24 @@ main div#addEvent_modal {
   color: white;
   width: 40vw;
   height: 40vh;
+}
+main div#modifyEvent {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 15px;
+  box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 40vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
 }
 
 footer {
@@ -107,8 +127,9 @@ footer {
 }
 
 .card {
-  padding: 5px 30px;
+  padding: 5px 30px 5vh 30px;
   display: flex;
+  position: relative;
   height: -moz-fit-content;
   height: fit-content;
   flex-direction: column;
@@ -117,7 +138,6 @@ footer {
   border-radius: 15px;
   box-sizing: border-box;
   overflow: auto;
-  min-height: 30vh;
   width: 90%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -189,8 +209,8 @@ footer {
 }
 
 .toggle-attendance {
-  display: flex;
-  justify-self: flex-end;
+  position: absolute;
+  bottom: 5px;
 }
 .toggle-attendance img {
   height: 17px;
@@ -201,5 +221,77 @@ footer {
 .attendance > img {
   height: 25px;
   width: 25px;
+}
+
+.sign-up {
+  display: block;
+}
+.sign-up button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "Poppins", sans-serif;
+}
+.sign-up button:hover {
+  transform: scale(105%);
+  transition: ease 0.5s;
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.delete-modal {
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 2vh;
+  background-color: white;
+  height: 30vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-modal.top {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.close-modal.top img {
+  width: 35px;
+  height: 35px;
+}
+.close-modal.top img:hover {
+  transform: scale(110%);
+  cursor: pointer;
+}
+
+.delete-options {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20%;
+}
+.delete-options input {
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.delete-options input:hover {
+  transform: scale(110%);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
 >>>>>>> e1f084a0edf329f573da6bc62dfb8dafdc53ce4c

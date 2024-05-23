@@ -8,6 +8,7 @@ main{
             position: absolute;
             flex-direction: column;
             justify-content: center;
+            z-index: 10;
             align-items: center;
             background-color: #242424;
             border-radius: 15px;
@@ -15,6 +16,22 @@ main{
             color: white;
             width: 40vw;
             height: 40vh;
+        }
+        &#modifyEvent{
+            display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #242424;
+            border-radius: 15px;
+            box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            min-width: 40vw;
+            min-height: 40vh;
+            padding: 1vh 1vw;
         }
     }
 }
