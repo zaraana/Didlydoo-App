@@ -4,5 +4,6 @@ export const formatDate = (date) => {
     weekday: "short",
     month: "short",
     day: "numeric",
+    year: "numeric",
   });
 };
