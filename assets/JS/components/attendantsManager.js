@@ -1,11 +1,11 @@
 import { getEvent } from "./getEvent.js";
 
-const postAttendant = async (eventId, body) => {
+const postAttendant = async (eventId, body, method) => {
   const url = `http://localhost:3000/api/events/${eventId}/attend`;
   body = JSON.stringify(body);
 
   let options = {
-    method: "POST",
+    method: method,
     headers: {
       "Content-Type": "application/json",
     },
@@ -19,7 +19,12 @@ const postAttendant = async (eventId, body) => {
   const result = await response.json();
 };
 
-export const toggleAttendanceModal = async (eventId) => {
+export const toggleAttendanceModal = async (Id, action) => {
+  let eventId = Id;
+  let participantName;
+  if (action === "edit") {
+    [participantName, eventId] = eventId.split("_");
+  }
   let eventDetails = await getEvent(eventId);
   eventDetails = eventDetails.dates;
   const body = document.querySelector("body");
@@ -28,14 +33,21 @@ export const toggleAttendanceModal = async (eventId) => {
   const attendModal = document.createElement("section");
   attendModal.classList.add("delete-modal");
   attendModal.innerHTML = `
-    <div class="close-modal top"><img src="assets/images/close-button.svg" alt="Close Modal"></div>
+    <div class="close-modal top"><img src="assets/images/close-button.svg" alt="Close Modal"></div>`;
+  if (!participantName) {
+    attendModal.innerHTML += `
     <div class="name-input">
         <label for="name">Your name</label>
         <input name="name" type="text" maxlength="15" id="nameInput" placeholder="Name" required>
     </div>
-    <div class="dates"></div>
-    <button id="add-attendant" type="submit">Submit</button>
-  `;
+    `;
+  } else {
+    attendModal.innerHTML += `<div class="name-input">
+    ${participantName}, when are you available?
+    </div>`;
+  }
+  attendModal.innerHTML += ` <div class="dates"></div>
+    <button id="add-attendant" type="submit">Submit</button>`;
   body.appendChild(modalContainer);
   modalContainer.appendChild(attendModal);
   const datesDiv = document.querySelector(".dates");
@@ -56,7 +68,12 @@ export const toggleAttendanceModal = async (eventId) => {
   const addAttendant = document.querySelector("#add-attendant");
   addAttendant.addEventListener("click", (e) => {
     const nameInput = document.querySelector("#nameInput");
-    const attendantName = nameInput.value;
+    let attendantName;
+    if (action === "edit") {
+      attendantName = participantName;
+    } else {
+      attendantName = nameInput.value;
+    }
     if (!attendantName) {
       alert("please fill out your name.");
     } else {
@@ -77,10 +94,14 @@ export const toggleAttendanceModal = async (eventId) => {
         name: attendantName,
         dates: selectedOptions,
       };
-      postAttendant(eventId, params);
+      if (action === "edit") {
+        postAttendant(eventId, params, "PATCH");
+      } else {
+        postAttendant(eventId, params, "POST");
+      }
     }
   });
-
+  // Buggy but is supposed to allow to close modal when clicking outside of it.
   // modalContainer.addEventListener("click", (e) => {
   //   if (e.target !== attendModal) {
   //     modalContainer.remove();

@@ -1,5 +1,28 @@
 [
   {
+    "id": "843f7a67aa38",
+    "name": "Something",
+    "author": "caroline",
+    "description": "Something?",
+    "dates": [
+      "2024-05-23"
+    ],
+    "created_at": "2024-05-23T07:25:10.496Z",
+    "num_modification": 0,
+    "last_modification": "2024-05-23T07:25:10.496Z",
+    "attendees": [
+      {
+        "name": "Zahra",
+        "dates": [
+          {
+            "date": "2024-05-23",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
@@ -17,15 +40,23 @@
         "dates": [
           {
             "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
             "available": false
           },
           {
-            "date": "2022-03-21",
+            "date": "2022-03-18",
             "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": false
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
+            "available": false
           }
         ]
       },
@@ -34,10 +65,22 @@
         "dates": [
           {
             "date": "2022-03-17",
-            "available": false
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
           },
           {
             "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
             "available": true
           }
         ]

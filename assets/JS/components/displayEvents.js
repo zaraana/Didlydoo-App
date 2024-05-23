@@ -47,7 +47,6 @@ const displayEvents = (events) => {
         <img src="assets/images/delete.svg" id="delete_${event.id}" class="delete-button" alt="delete event">
         </div>
         </div>
-        
         <div class="event-info">
             <span class="author">created by ${event.author}</span><span class="creation-date"> on ${createdDate}</span>
         </div>
@@ -61,7 +60,7 @@ const displayEvents = (events) => {
     attendeesDiv.classList.add("attendees-list");
     attendeesDiv.innerHTML += `<div class="participant">Participants</div>`;
     for (let participant of attendeesList) {
-      attendeesDiv.innerHTML += `<div class="participant">${participant}</div>`;
+      attendeesDiv.innerHTML += `<div class="participant">${participant}<button type="submit" id="edit-attendance_${participant}_${event.id}" class="edit-participation">Edit</button></div>`;
     }
     container.appendChild(card);
     const attendanceTable = document.querySelector(`#details_${event.id}`);
@@ -120,7 +119,16 @@ const displayEvents = (events) => {
   const signUpBtns = document.querySelectorAll(".attend-button");
   for (let signUpBtn of signUpBtns) {
     signUpBtn.addEventListener("click", (e) => {
-      toggleAttendanceModal(e.target.id.split("_")[1]);
+      toggleAttendanceModal(e.target.id.split("_")[1], "add");
+    });
+  }
+  const editAttendanceBtns = document.querySelectorAll(".edit-participation");
+  for (let editAttendance of editAttendanceBtns) {
+    editAttendance.addEventListener("click", (e) => {
+      toggleAttendanceModal(
+        `${e.target.id.split("_")[1]}_${e.target.id.split("_")[2]}`,
+        "edit"
+      );
     });
   }
 };
