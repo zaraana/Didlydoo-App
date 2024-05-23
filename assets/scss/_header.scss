@@ -1,20 +1,16 @@
-body{
-    min-height: 100vh;
-    background: rgb(229,229,231);
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(242,242,243,1) 100%);
-border-radius: 2rem;
-}
 
 header{
+    display: flex;
+    justify-content: space-between;
     padding-top: 30px;
     margin-left: 30px;
 
 section{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
     gap: 10px;
+    display: flex;
+    
+    flex-direction: row;
+
     .logo{
         padding: 10px;
         width: 50px;
@@ -22,46 +18,20 @@ section{
         
     }
     h1{
+        margin-top: 20px;
         font-size: 20px;
     }
-    p{
-        font-size: 12px;
-    }
+}
+.toggleDarkMode{
+    border: none;
+    background: none;
+    margin-right: 10px;
 
-    .darkMode{
-        width: 15px;
-        height: 15px;
-        padding: 10px;
-        margin-left: 200px;
 
+    img{
+        width: 20x;
+        height: 20px;
     }
 }
-
-    nav{
-        ul{
-            display: flex;
-            justify-content: flex-end;
-            gap: 5px;
-            margin-right: 20px;
-            
-    
-            button{
-                background-color: #e4e3e5;
-                border-radius: 2rem;
-                border: none;
-                padding: 3px 10px;
-                color:#97959d;
-                cursor: pointer;
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-
-                &:hover{
-                    background-color: #a4a3aa;
-                    transition: 1.2s;
-                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-
-                }
-            }
-        }
     }
-}
+
