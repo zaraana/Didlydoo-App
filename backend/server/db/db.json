@@ -10,7 +10,17 @@
     "created_at": "2024-05-23T09:38:07.089Z",
     "num_modification": 3,
     "last_modification": "2024-05-23T09:49:58.910Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Something",
+        "dates": [
+          {
+            "date": "2024-05-02",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "843f7a67aa38",
@@ -18,14 +28,24 @@
     "author": "Me",
     "description": "Something !!",
     "dates": [
-      "2024-05-23"
+      "2024-05-23",
+      "2024-05-24"
     ],
     "created_at": "2024-05-23T07:25:10.496Z",
-    "num_modification": 5,
-    "last_modification": "2024-05-23T09:32:22.739Z",
+    "num_modification": 6,
+    "last_modification": "2024-05-23T13:18:57.486Z",
     "attendees": [
       {
         "name": "Zahra",
+        "dates": [
+          {
+            "date": "2024-05-23",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Illiess",
         "dates": [
           {
             "date": "2024-05-23",
@@ -103,23 +123,23 @@
         "dates": [
           {
             "date": "2022-03-17",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-18",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-21",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-22",
-            "available": true
+            "available": false
           },
           {
             "date": "2024-06-14",
-            "available": true
+            "available": false
           }
         ]
       },
@@ -144,7 +164,7 @@
           },
           {
             "date": "2024-06-14",
-            "available": true
+            "available": false
           }
         ]
       }

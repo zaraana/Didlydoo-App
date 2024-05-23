@@ -12,7 +12,7 @@ export const toggleDeleteModal = (eventId) => {
   const deleteModal = document.createElement("section");
   deleteModal.classList.add("delete-modal");
   deleteModal.innerHTML = `
-  <div class="close-modal top"><img src="assets/images/close-button.svg" alt="Close Modal"></div>
+  <div class="top"><img class="close-modal" src="assets/images/close-button.svg" alt="Close Modal"></div>
   <p class="confirmation-text">Are you sure you want to delete this event?</p>
   <div class="delete-options">
     <input type="submit" name="yes" id="deleteConfirm" value="YES">
@@ -28,11 +28,11 @@ export const toggleDeleteModal = (eventId) => {
     });
   }
 
-  modalContainer.addEventListener("click", (e) => {
-    if (e.target !== deleteModal) {
-      modalContainer.remove();
-    }
-  });
+  // modalContainer.addEventListener("click", (e) => {
+  //   if (e.target !== deleteModal) {
+  //     modalContainer.remove();
+  //   }
+  // });
   const deleteBtn = document.querySelector("#deleteConfirm");
   deleteBtn.addEventListener("click", () => {
     deleteEvent(eventId);

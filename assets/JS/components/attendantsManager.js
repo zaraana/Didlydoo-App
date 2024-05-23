@@ -1,4 +1,5 @@
 import { getEvent } from "./getEvent.js";
+import { formatDate } from "./formatDate.js";
 
 const postAttendant = async (eventId, body, method) => {
   const url = `http://localhost:3000/api/events/${eventId}/attend`;
@@ -33,7 +34,7 @@ export const toggleAttendanceModal = async (Id, action) => {
   const attendModal = document.createElement("section");
   attendModal.classList.add("delete-modal");
   attendModal.innerHTML = `
-    <div class="close-modal top"><img src="assets/images/close-button.svg" alt="Close Modal"></div>`;
+    <div class="top"><img class="close-modal" src="assets/images/close-button.svg" alt="Close Modal"></div>`;
   if (!participantName) {
     attendModal.innerHTML += `
     <div class="name-input">
@@ -53,11 +54,11 @@ export const toggleAttendanceModal = async (Id, action) => {
   const datesDiv = document.querySelector(".dates");
   for (let session of eventDetails) {
     datesDiv.innerHTML += `
-    ${session.date}
+    <span><span>${formatDate(session.date)}</span>
     <select name="session" id="${session.date}">
         <option value="Available">Available</option>
         <option value="Not Available">Not available</option>
-    </select><br>`;
+    </select></span>`;
   }
   const closeModalBtns = document.querySelectorAll(".close-modal");
   for (let closeModalBtn of closeModalBtns) {
