@@ -27,14 +27,13 @@ export function modifModal(id,prefill){
     add_dateButton.addEventListener('click',event=>{
 
         tab_newDate.push(add_datesInput.value);
-        add_datesInput.value='';
-
+        
         affiche_dateListe(tab_newDate,div_addedDate);
 
-
+        add_datesInput.value='';
     })
 
-
+    
     modifEvent(id,tab_newDate);
 
 }
