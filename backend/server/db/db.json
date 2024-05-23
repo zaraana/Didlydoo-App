@@ -97,6 +97,56 @@
             "available": true
           }
         ]
+      },
+      {
+        "name": "ez",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Zahra",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2024-06-14",
+            "available": true
+          }
+        ]
       }
     ],
     "created_at": "2021-11-15T00:00",

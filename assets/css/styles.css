@@ -159,6 +159,29 @@ footer {
   cursor: pointer;
 }
 
+.participant {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  height: 25px;
+  box-sizing: border-box;
+}
+.participant img {
+  padding-right: 10px;
+}
+
+.attendance {
+  max-height: 25px;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.col-title {
+  height: 60px;
+  border-bottom: 1px solid grey;
+}
+
 .expend {
   display: flex;
   gap: 5px;
@@ -174,27 +197,26 @@ footer {
   margin-top: 1vh;
   border: 1px solid rgb(206, 206, 206);
   border-radius: 10px;
-  padding: 2px;
-  flex-direction: row;
-  gap: 15px;
+  justify-content: left;
   transition: ease 1s;
+  overflow-x: auto;
 }
 .attendance-table > * {
-  flex: 1;
+  padding: 0 5px;
+  border: 1px solid rgb(206, 206, 206);
 }
 
 .date-attendance {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
-  flex: 1;
-}
-.date-attendance:first-child {
-  font-weight: bold;
 }
 .date-attendance .date {
   font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .event-info {
@@ -208,7 +230,6 @@ footer {
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .toggle-attendance {
@@ -221,16 +242,15 @@ footer {
   padding-right: 5px;
 }
 
-.attendance > img {
-  height: 25px;
-  width: 25px;
-}
-
 .sign-up {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 .sign-up button {
+  font-weight: bold;
+  margin-top: 0.8em;
   padding: 5px 10px;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   font-family: "Poppins", sans-serif;
