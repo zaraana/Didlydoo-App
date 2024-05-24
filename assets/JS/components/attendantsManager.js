@@ -108,10 +108,4 @@ export const toggleAttendanceModal = async (Id, action) => {
       }
     }
   });
-  // Buggy but is supposed to allow to close modal when clicking outside of it.
-  // modalContainer.addEventListener("click", (e) => {
-  //   if (e.target !== attendModal) {
-  //     modalContainer.remove();
-  //   }
-  // });
 };

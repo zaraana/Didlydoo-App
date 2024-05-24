@@ -29,6 +29,19 @@
             "available": true
           }
         ]
+      },
+      {
+        "name": "Something",
+        "dates": [
+          {
+            "date": "2024-05-23",
+            "available": false
+          },
+          {
+            "date": "2024-05-24",
+            "available": true
+          }
+        ]
       }
     ]
   },
