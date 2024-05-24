@@ -1,7 +1,8 @@
 export function postEvent(eventName,author,dateTab,description){// Define your API endpoint
     const url = 'http://localhost:3000/api/events';
     
-    // Define the data you want to send
+    if(eventName.trim()!=='' && author.trim()!=='' && description.trim()!==''){
+        // Define the data you want to send
     let data = {
         name: eventName, 
         dates: dateTab, 
@@ -30,4 +31,7 @@ export function postEvent(eventName,author,dateTab,description){// Define your A
         })
         .then(data => console.log('Success:', data))
         .catch(error => console.error('Error:', error));
+    }else{
+        return alert('vous devez remplir les tte les case (exept Date)')
     }
+}
