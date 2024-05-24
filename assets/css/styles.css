@@ -195,6 +195,18 @@ body {
   filter: brightness(0) saturate(50%);
   filter: invert(21%) sepia(19%) saturate(2191%) hue-rotate(126deg) brightness(50%) contrast(94%);
 }
+.darkMode .delete-modal {
+  background-color: #2b456b;
+  border: 1px solid #a2a8d3;
+}
+.darkMode .delete-modal input {
+  background-color: #a2a8d3;
+  color: #2b456b;
+}
+.darkMode img.close-modal {
+  filter: brightness(0) saturate(50%);
+  filter: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(855%) hue-rotate(195deg) brightness(95%) contrast(97%);
+}
 
 header {
   display: flex;
