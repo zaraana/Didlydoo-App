@@ -1,5 +1,6 @@
 import { postEvent } from "./post_event.js";
 import { affiche_dateListe } from "./afficheModalDateList.js";
+import { sanitizeInput } from "./sanitizeInput.js";
 
 const event_modal = document.getElementById("addEvent_modal");
 const addEvent_button = document.getElementById("add-event");
@@ -34,7 +35,7 @@ export function add_event() {
   button_AddDate.addEventListener("click", (event) => {
     //ajoute la date au tab
     if (input_date.value !== "") {
-      tab.push(input_date.value);
+      tab.push(sanitizeInput(input_date.value));
       input_date.value = "";
 
       //affiche la list des date avc une fct pour supp
@@ -45,10 +46,10 @@ export function add_event() {
 
   submit_addEvent.addEventListener("click", (event) => {
     postEvent(
-      input_name.value,
-      input_author.value,
+      sanitizeInput(input_name.value),
+      sanitizeInput(input_author.value),
       tab,
-      input_description.value
+      sanitizeInput(input_description.value)
     );
 
     input_name.innerHTML = "";

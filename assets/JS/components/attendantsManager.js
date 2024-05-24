@@ -1,5 +1,6 @@
 import { getEvent } from "./getEvent.js";
 import { formatDate } from "./formatDate.js";
+import { sanitizeInput } from "./sanitizeInput.js";
 
 const postAttendant = async (eventId, body, method) => {
   const url = `http://localhost:3000/api/events/${eventId}/attend`;
@@ -73,7 +74,7 @@ export const toggleAttendanceModal = async (Id, action) => {
     if (action === "edit") {
       attendantName = participantName;
     } else {
-      attendantName = nameInput.value.trim();
+      attendantName = sanitizeInput(nameInput.value.trim());
     }
     if (!attendantName) {
       alert("please fill out your name.");
@@ -82,7 +83,7 @@ export const toggleAttendanceModal = async (Id, action) => {
       for (let session of eventDetails) {
         let date = session.date;
         let selectElement = document.getElementById(date);
-        let attendanceValue = selectElement.value;
+        let attendanceValue = sanitizeInput(selectElement.value);
         if (attendanceValue === "Available") {
           attendanceValue = true;
         } else {
