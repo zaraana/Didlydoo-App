@@ -35,6 +35,10 @@
         display: flex;
         justify-self: flex-end;
         gap: 20px;
+        img {
+            max-height:25px; 
+            max-width: 25px;
+        }
         >*:hover {
             transform: scale(108%);
             transition: ease 0.5s;

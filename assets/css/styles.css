@@ -158,6 +158,10 @@ footer {
   justify-self: flex-end;
   gap: 20px;
 }
+.card-title .controls img {
+  max-height: 25px;
+  max-width: 25px;
+}
 .card-title .controls > *:hover {
   transform: scale(108%);
   transition: ease 0.5s;
