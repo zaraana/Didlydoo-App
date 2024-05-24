@@ -24,7 +24,6 @@ export function add_event() {
       const month = String(today.getMonth() + 1).padStart(2, "0");
       const day = String(today.getDate()).padStart(2, "0");
       const formattedDate = `${year}-${month}-${day}`;
-      console.log(formattedDate);
       addDateField.setAttribute("min", formattedDate);
     } else {
       event_modal.style.display = "none";
@@ -34,11 +33,14 @@ export function add_event() {
   let tab = [];
   button_AddDate.addEventListener("click", (event) => {
     //ajoute la date au tab
-    tab.push(input_date.value);
-    input_date.value = "";
+    if (input_date.value !== "") {
+      tab.push(input_date.value);
+      input_date.value = "";
 
-    //affiche la list des date avc une fct pour supp
-    affiche_dateListe(tab, date_list);
+      //affiche la list des date avc une fct pour supp
+      affiche_dateListe(tab, date_list);
+    }
+    input_date.value = "";
   });
 
   submit_addEvent.addEventListener("click", (event) => {

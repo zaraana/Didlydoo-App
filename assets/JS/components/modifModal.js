@@ -33,11 +33,13 @@ export function modifModal(id, prefill) {
   let tab_newDate = [];
 
   add_dateButton.addEventListener("click", (event) => {
-    tab_newDate.push(add_datesInput.value);
+    if (add_datesInput !== "") {
+      tab_newDate.push(add_datesInput.value);
 
-    affiche_dateListe(tab_newDate, div_addedDate);
+      affiche_dateListe(tab_newDate, div_addedDate);
 
-    add_datesInput.value = "";
+      add_datesInput.value = "";
+    }
   });
 
   modifEvent(id, tab_newDate);
