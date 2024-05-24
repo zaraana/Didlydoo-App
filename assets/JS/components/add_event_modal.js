@@ -26,13 +26,17 @@ export function add_event(){
     let tab=[];
     button_AddDate.addEventListener('click',event=>{
 
-        //ajoute la date au tab 
-        tab.push(input_date.value);
+        //ajoute la date au tab
+        if(input_date.value !==''){
+
+            tab.push(input_date.value);
+            input_date.value='';
+
+            //affiche la list des date avc une fct pour supp
+            affiche_dateListe(tab,date_list);
+
+        }
         input_date.value='';
-
-        //affiche la list des date avc une fct pour supp
-        affiche_dateListe(tab,date_list);
-
     })
 
     submit_addEvent.addEventListener('click',event=>{

@@ -2,14 +2,15 @@
   {
     "id": "eb1697c99a40",
     "name": "Birthday",
-    "author": "Iliess",
+    "author": "manu",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime corrupti recusandae dignissimos laborum iusto doloribus sequi esse, aliquid nobis sapiente voluptas nulla illo neque perspiciatis! Recusandae fuga dolores nulla quidem?Lorem ipsum dolor sit a",
     "dates": [
-      "2024-05-02"
+      "2024-05-02",
+      "2024-05-30"
     ],
     "created_at": "2024-05-23T09:38:07.089Z",
-    "num_modification": 3,
-    "last_modification": "2024-05-23T09:49:58.910Z",
+    "num_modification": 4,
+    "last_modification": "2024-05-24T07:16:39.605Z",
     "attendees": [
       {
         "name": "Something",
