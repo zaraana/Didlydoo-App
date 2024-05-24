@@ -8,6 +8,7 @@ const deleteEvent = async (eventId) => {
 export const toggleDeleteModal = (eventId) => {
   const body = document.querySelector("body");
   const modalContainer = document.createElement("div");
+  // created the blur container when modal opened
   modalContainer.classList.add("modal-container");
   const deleteModal = document.createElement("section");
   deleteModal.classList.add("delete-modal");
@@ -28,6 +29,7 @@ export const toggleDeleteModal = (eventId) => {
     });
   }
 
+  // even when click exterior close it  e.target =cursor
   modalContainer.addEventListener("click", (e) => {
     if (e.target === modalContainer) {
       modalContainer.remove();

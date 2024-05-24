@@ -9,10 +9,14 @@ export const getEvents = async () => {
   const result = await response.json();
 
   // display the events to the page
+  //  crea una funzione ke cn tab x vedere result
   displayEvents(result);
 };
 
+// x aggiungere presenze
 const getAttendantsList = (dateList) => {
+  // set x display nome persona + edit 
+  // console.log(attendeesSet);
   let attendeesSet = new Set();
   for (let date of dateList) {
     date.attendees.forEach((attendee) => attendeesSet.add(attendee.name));
@@ -33,6 +37,7 @@ const toggleDetails = (id) => {
 };
 
 const displayEvents = (events) => {
+  // console.log(events); x vedere cm a ripreso i dati
   const container = document.querySelector(".events-container");
   container.innerHTML = "";
   for (let event of events) {
@@ -115,6 +120,7 @@ const displayEvents = (events) => {
       modifModal(
         e.target.id.split("_")[1],
         events.filter((object) => object.id === e.target.id.split("_")[1])
+        // make sure that the object am gonna modify is the one am clicking on 
       );
     });
   }
