@@ -4,15 +4,19 @@ body {
     min-height: 100vh;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(242,242,243,1) 100%);
-border-radius: 2rem;
+    border-radius: 2rem;
 }
 
 .darkMode{
-    background: #B4B4B8;
+    background: #38598b;
     color: white;
 
+    header{
+    background: #a2a8d3;
+    }
+
     .card{
-        background: #C7C8CC;
+        background: #a2a8d3;
     }
 
     main{

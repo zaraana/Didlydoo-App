@@ -2,8 +2,9 @@
 header{
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-    margin-left: 30px;
+    padding-top: 20px;
+    background: #EEEEEE ;
+    padding-bottom: 20px;
 
 section{
     gap: 10px;
@@ -15,6 +16,7 @@ section{
         padding: 10px;
         width: 50px;
         height: 40px;
+        margin-left: 30px;
         
     }
     h1{
@@ -33,5 +35,5 @@ section{
         height: 20px;
     }
 }
-    }
+}
 
