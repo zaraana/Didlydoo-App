@@ -1,5 +1,6 @@
 import { getEvent } from "./getEvent.js";
 import { formatDate } from "./formatDate.js";
+import { sanitizeInput } from "./sanitizeInput.js";
 
 const postAttendant = async (eventId, body, method) => {
   const url = `http://localhost:3000/api/events/${eventId}/attend`;
@@ -66,6 +67,11 @@ export const toggleAttendanceModal = async (Id, action) => {
       modalContainer.remove();
     });
   }
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target === modalContainer) {
+      modalContainer.remove();
+    }
+  });
   const addAttendant = document.querySelector("#add-attendant");
   addAttendant.addEventListener("click", (e) => {
     const nameInput = document.querySelector("#nameInput");
@@ -73,7 +79,7 @@ export const toggleAttendanceModal = async (Id, action) => {
     if (action === "edit") {
       attendantName = participantName;
     } else {
-      attendantName = nameInput.value;
+      attendantName = sanitizeInput(nameInput.value.trim());
     }
     if (!attendantName) {
       alert("please fill out your name.");
@@ -82,7 +88,7 @@ export const toggleAttendanceModal = async (Id, action) => {
       for (let session of eventDetails) {
         let date = session.date;
         let selectElement = document.getElementById(date);
-        let attendanceValue = selectElement.value;
+        let attendanceValue = sanitizeInput(selectElement.value);
         if (attendanceValue === "Available") {
           attendanceValue = true;
         } else {
@@ -102,10 +108,4 @@ export const toggleAttendanceModal = async (Id, action) => {
       }
     }
   });
-  // Buggy but is supposed to allow to close modal when clicking outside of it.
-  // modalContainer.addEventListener("click", (e) => {
-  //   if (e.target !== attendModal) {
-  //     modalContainer.remove();
-  //   }
-  // });
 };
