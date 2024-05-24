@@ -10,6 +10,7 @@ const button_AddDate = document.getElementById('add_date');
 const input_description = document.getElementById('description');
 const submit_addEvent = document.getElementById('submit_addEvent');
 const date_list =document.getElementById('liste_date');
+const fond_modal = document.querySelector('#fond-modal');
 
 export function add_event(){
 
@@ -17,11 +18,20 @@ export function add_event(){
 
         if (event_modal.style.display === 'none' || event_modal.style.display === '' ) {
             event_modal.style.display = "flex";
+            fond_modal.classList.add('modal-container');
         }else{
             event_modal.style.display = "none";
+            fond_modal.classList.remove('modal-container') ;
         }
     
     })  
+
+    fond_modal.addEventListener("click", (e) => {
+        if (e.target === fond_modal) {
+            fond_modal.classList.remove('modal-container') ;
+          event_modal.style.display ='none'
+        }
+      });
 
     let tab=[];
     button_AddDate.addEventListener('click',event=>{

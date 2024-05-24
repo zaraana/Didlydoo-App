@@ -9,13 +9,23 @@ export function modifModal(id,prefill){
     const add_dateButton =document.getElementById('add_dateButton');
     const add_datesInput = document.getElementById('add_newDate');
     const div_addedDate =document.getElementById('dates_added');
+    const fond_modal = document.querySelector('#fond-modal');
 
     const modal=document.getElementById('modifyEvent');
     if(modal.style.display ==='' || modal.style.display === 'none'){
         modal.style.display='flex';
+        fond_modal.classList.add('modal-container');
     }else{
         modal.style.display ='none'
+        fond_modal.classList.remove('modal-container') ;
     }
+
+    fond_modal.addEventListener("click", (e) => {
+        if (e.target === fond_modal) {
+            fond_modal.classList.remove('modal-container') ;
+          modal.style.display ='none'
+        }
+      });
 
     // prefill stuff
     modifName.value=prefill[0].name;
