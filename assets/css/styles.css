@@ -80,6 +80,9 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main div button {
+  border-radius: 15px;
+}
 main div#addEvent_modal {
   display: none;
   position: absolute;
@@ -91,8 +94,11 @@ main div#addEvent_modal {
   border-radius: 15px;
   box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
   color: white;
-  width: 40vw;
-  height: 40vh;
+  min-width: 40vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 main div#modifyEvent {
   display: none;
@@ -116,6 +122,32 @@ main div#modifyEvent {
 
 .fond-modal {
   display: none;
+}
+
+.pinkdisign input {
+  background-color: #ee3a85;
+  outline-color: white;
+  border: none;
+  border-radius: 15px;
+}
+.pinkdisign button {
+  background-color: #ee3a85;
+  background-color: none;
+  border-radius: 15px;
+  margin: 1vh;
+  transition: 0.3s ease;
+}
+.pinkdisign button:hover {
+  transform: scale(1.4);
+  outline: blueviolet;
+}
+.pinkdisign textarea {
+  margin: 1vh 1vw;
+  min-height: 10vh;
+  min-width: 20vw;
+  border-radius: 15px;
+  background-color: #ee3a85;
+  outline-color: white;
 }
 
 footer {

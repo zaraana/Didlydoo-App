@@ -26,6 +26,9 @@ main{
     align-items: center;
 
     div{
+        button{
+            border-radius: 15px;
+        }
         &#addEvent_modal{
             display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
             position: absolute;
@@ -37,8 +40,9 @@ main{
             border-radius: 15px;
             box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
             color: white;
-            width: 40vw;
-            height: 40vh;
+            min-width:40vw;
+            width: fit-content;
+            height:fit-content;
         }
         &#modifyEvent{
             display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
@@ -61,4 +65,31 @@ main{
 }
 .fond-modal{
     display: none;
+}
+.pinkdisign{
+    input{
+        background-color: #ee3a85;
+        outline-color: white;
+        border: none;
+        border-radius: 15px;
+    }
+    button{
+        background-color: #ee3a85 ;
+        background-color: none;
+        border-radius: 15px ;
+        margin: 1vh;
+        transition: 0.3s ease;
+    }
+    button:hover{
+        transform: scale(1.4);
+        outline: blueviolet;
+    }
+    textarea{
+        margin: 1vh 1vw;
+        min-height: 10vh ;
+        min-width: 20vw ;
+        border-radius: 15px;
+        background-color: #ee3a85;
+        outline-color:white ;
+    }
 }
