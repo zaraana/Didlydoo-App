@@ -1,86 +1,86 @@
-.modal-container {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    background-color: rgba(0, 0, 0, 0.5 );
-    position: absolute;
-    z-index:2;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    box-sizing:border-box;
-}
+// .modal-container {
+//     display: flex;
+//     align-items: center;
+//     justify-content:center;
+//     background-color: rgba(0, 0, 0, 0.5 );
+//     position: absolute;
+//     z-index:2;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     box-sizing:border-box;
+// }
 
-.name-input {
-    margin-bottom: 20px;
-}
+// .name-input {
+//     margin-bottom: 20px;
+// }
 
-.delete-modal {
-    max-width: 90%;
-    border-radius: 15px;
-    border: 2px solid black;
-    padding: .2em;
-    min-height: 20vh;
-    background-color: white;
-    height: fit-content;
-    width: 400px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
+// .delete-modal {
+//     max-width: 90%;
+//     border-radius: 15px;
+//     border: 2px solid black;
+//     padding: .2em;
+//     min-height: 20vh;
+//     background-color: white;
+//     height: fit-content;
+//     width: 400px;
+//     display:flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-between;
+// }
 
-.top {
-    display:flex;
-    width: 100%;
-    justify-content: flex-end;
-    img {
-        width: 35px;
-        height: 35px;
-        &:hover {
-            transform: scale(110%);
-            cursor:pointer;
-        }
-    }
-}
+// .top {
+//     display:flex;
+//     width: 100%;
+//     justify-content: flex-end;
+//     img {
+//         width: 35px;
+//         height: 35px;
+//         &:hover {
+//             transform: scale(110%);
+//             cursor:pointer;
+//         }
+//     }
+// }
 
-.delete-options {
-    display: flex;
-    width: 100%;
-    justify-content:center;
-    gap: 30%;
-    input {
-        padding: 5px 10px;
-        margin-bottom: 1em;
-        background-color: white;
-        border-radius: 5px;
-        font-family:$poppins;
-        font-weight: 500;
-        &:hover {
-            transform: scale(110%);
-            cursor:pointer;
-        }
-    }
-}
+// .delete-options {
+//     display: flex;
+//     width: 100%;
+//     justify-content:center;
+//     gap: 30%;
+//     input {
+//         padding: 5px 10px;
+//         margin-bottom: 1em;
+//         background-color: white;
+//         border-radius: 5px;
+//         font-family:$poppins;
+//         font-weight: 500;
+//         &:hover {
+//             transform: scale(110%);
+//             cursor:pointer;
+//         }
+//     }
+// }
 
-.dates {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: .5em;
-    margin-bottom: 1em;
-    >* {
-        display : flex;
-        >* {
-            flex:1;
-            &:first-child {
-                text-align: right;
-                padding-right: 1em;
-            }
-        }
-    }
-}
+// .dates {
+//     width: 90%;
+//     display: flex;
+//     flex-direction: column;
+//     gap: .5em;
+//     margin-bottom: 1em;
+//     >* {
+//         display : flex;
+//         >* {
+//             flex:1;
+//             &:first-child {
+//                 text-align: right;
+//                 padding-right: 1em;
+//             }
+//         }
+//     }
+// }
 
-#nameInput {
-    width: 150px;
-}
+// #nameInput {
+//     width: 150px;
+// }

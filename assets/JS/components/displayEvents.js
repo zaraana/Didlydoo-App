@@ -15,7 +15,7 @@ export const getEvents = async () => {
 
 // x aggiungere presenze
 const getAttendantsList = (dateList) => {
-  // set x display nome persona + edit 
+  // set x display nome persona + edit
   // console.log(attendeesSet);
   let attendeesSet = new Set();
   for (let date of dateList) {
@@ -93,11 +93,11 @@ const displayEvents = (events) => {
           </div>`;
         } else if (!attendant.available) {
           attendees.innerHTML += `<div class="attendance">
-          <img src="assets/images/cross.svg" alt="not attending">
+          <img src="assets/images/cross.svg" class="not-attending" alt="not attending">
           </div>`;
         } else {
           attendees.innerHTML += `<div class="attendance">
-          <img src="assets/images/confirm.svg" alt="attending">
+          <img src="assets/images/confirm.svg" class="attending" alt="attending">
           </div>`;
         }
         dateDiv.appendChild(attendees);
@@ -120,7 +120,7 @@ const displayEvents = (events) => {
       modifModal(
         e.target.id.split("_")[1],
         events.filter((object) => object.id === e.target.id.split("_")[1])
-        // make sure that the object am gonna modify is the one am clicking on 
+        // make sure that the object am gonna modify is the one am clicking on
       );
     });
   }
