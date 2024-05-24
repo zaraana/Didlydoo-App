@@ -157,9 +157,43 @@ body {
 }
 .darkMode .card {
   background: #a2a8d3;
+  border: 1px solid #2b456b;
 }
 .darkMode main button {
   background: #C7C8CC;
+}
+.darkMode .controls .edit-button {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(60%) contrast(87%);
+}
+.darkMode .controls .delete-button {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+}
+.darkMode .event-info {
+  color: #38598b;
+}
+.darkMode .toggle-attendance {
+  color: #07433c;
+}
+.darkMode .attend-button {
+  background-color: #38598b;
+  color: white;
+}
+.darkMode .edit-participation {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+}
+.darkMode .attendance {
+  filter: brightness(0) saturate(50%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(100%) contrast(87%);
+}
+.darkMode .attendance .not-attending {
+  filter: invert(80%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(10%) contrast(87%);
+}
+.darkMode .attending {
+  filter: brightness(0) saturate(50%);
+  filter: invert(21%) sepia(19%) saturate(2191%) hue-rotate(126deg) brightness(50%) contrast(94%);
 }
 
 header {
@@ -368,6 +402,10 @@ footer {
 .sign-up {
   display: flex;
   justify-content: center;
+}
+
+.edit-participation {
+  cursor: pointer;
 }
 
 .attend-button, #add-attendant {
