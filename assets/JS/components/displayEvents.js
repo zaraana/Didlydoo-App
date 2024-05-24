@@ -48,8 +48,8 @@ const displayEvents = (events) => {
         <div class="card-title">
         <h3>${event.name}</h3>
         <div class="controls">
-        <img src="assets/images/edit.svg" id="edit_${event.id}" class="edit-button" alt="edit event">  
-        <img src="assets/images/delete.svg" id="delete_${event.id}" class="delete-button" alt="delete event">
+        <img src="assets/images/edit.svg" title="Edit Event" id="edit_${event.id}" class="edit-button" alt="edit event">  
+        <img src="assets/images/delete.svg" title="Delete Event" id="delete_${event.id}" class="delete-button" alt="delete event">
         </div>
         </div>
         <div class="event-info">
@@ -63,19 +63,26 @@ const displayEvents = (events) => {
     const attendeesList = getAttendantsList(event.dates);
     const attendeesDiv = document.createElement("div");
     attendeesDiv.classList.add("attendees-list");
-    // += aggiunge alla fine dela div
-    attendeesDiv.innerHTML += `<div class="participant">Participants</div>`;
+    attendeesDiv.innerHTML += `<div class="participant col-title">Participants</div>`;
     for (let participant of attendeesList) {
-      attendeesDiv.innerHTML += `<div class="participant">${participant}<button type="submit" id="edit-attendance_${participant}_${event.id}" class="edit-participation">Edit</button></div>`;
+      attendeesDiv.innerHTML += `<div class="participant"><img src="assets/images/edit-attendance.svg" alt="Edit attendance" title="change attendance"  id="edit-attendance_${participant}_${event.id}" class="edit-participation">${participant}</div>`;
     }
     container.appendChild(card);
     const attendanceTable = document.querySelector(`#details_${event.id}`);
     attendanceTable.appendChild(attendeesDiv);
     // // Creates dates entries
     for (let eventDate of event.dates) {
+      let formattedDate = formatDate(eventDate.date);
+      let day;
+      let month;
+      let year;
+      let dateElems = formattedDate.split(" ");
+      day = dateElems[1];
+      month = dateElems[2];
+      year = dateElems[3];
       const dateDiv = document.createElement("div");
       dateDiv.classList.add("date-attendance");
-      dateDiv.innerHTML = `<span class="date">${eventDate.date}</span>`;
+      dateDiv.innerHTML = `<span class="date col-title"><span>${day}</span><span>${month}</span><span>${year}</span></span>`;
       attendanceTable.appendChild(dateDiv);
       const attendees = document.createElement("div");
       attendees.classList.add("attendees");
@@ -86,11 +93,11 @@ const displayEvents = (events) => {
           </div>`;
         } else if (!attendant.available) {
           attendees.innerHTML += `<div class="attendance">
-          <img class="attendance" src="assets/images/cross.svg" alt="not attending">
+          <img src="assets/images/cross.svg" alt="not attending">
           </div>`;
         } else {
           attendees.innerHTML += `<div class="attendance">
-          <img class="attendance" src="assets/images/confirm.svg" alt="attending">
+          <img src="assets/images/confirm.svg" alt="attending">
           </div>`;
         }
         dateDiv.appendChild(attendees);
@@ -98,7 +105,7 @@ const displayEvents = (events) => {
     }
     const attendBtn = document.createElement("div");
     attendBtn.classList.add("sign-up");
-    attendBtn.innerHTML = `<button class="attend-button" type="submit" id="sign-up_${event.id}">Sign up</button>`;
+    attendBtn.innerHTML = `<button class="attend-button" type="submit" id="sign-up_${event.id}">Attend</button>`;
     attendeesDiv.appendChild(attendBtn);
   }
   const toggleButtons = document.querySelectorAll(".toggle-attendance");
