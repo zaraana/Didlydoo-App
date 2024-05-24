@@ -9,9 +9,9 @@ export function modifEvent(id, tab) {
 
   submitModif.addEventListener("click", (event) => {
     const updates = {
-      name: sanitizeInput(InputmodifName.value),
-      author: sanitizeInput(InputmodifAuthor.value),
-      description: sanitizeInput(InputmodifDescription.value),
+      name: sanitizeInput(modifName.value),
+      author: sanitizeInput(modifAuthor.value),
+      description: sanitizeInput(modifDescription.value),
     };
 
     updateEvent(id, updates)

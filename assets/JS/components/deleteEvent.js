@@ -28,11 +28,11 @@ export const toggleDeleteModal = (eventId) => {
     });
   }
 
-  // modalContainer.addEventListener("click", (e) => {
-  //   if (e.target !== deleteModal) {
-  //     modalContainer.remove();
-  //   }
-  // });
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target === modalContainer) {
+      modalContainer.remove();
+    }
+  });
   const deleteBtn = document.querySelector("#deleteConfirm");
   deleteBtn.addEventListener("click", () => {
     deleteEvent(eventId);

@@ -3,14 +3,14 @@
     "id": "843f7a67aa38",
     "name": "Something",
     "author": "Me",
-    "description": "Something !!",
+    "description": "Something !!&lt;img src=\"bla.jpg\"&gt;",
     "dates": [
       "2024-05-23",
       "2024-05-24"
     ],
     "created_at": "2024-05-23T07:25:10.496Z",
-    "num_modification": 6,
-    "last_modification": "2024-05-23T13:18:57.486Z",
+    "num_modification": 7,
+    "last_modification": "2024-05-24T09:08:52.887Z",
     "attendees": [
       {
         "name": "Zahra",
@@ -73,27 +73,6 @@
             "available": true
           }
         ]
-      },
-      {
-        "name": " ",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": false
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
-            "date": "2022-03-21",
-            "available": false
-          },
-          {
-            "date": "2022-03-22",
-            "available": false
-          }
-        ]
       }
     ],
     "created_at": "2021-11-15T00:00",
@@ -144,31 +123,6 @@
           {
             "date": "2022-03-12",
             "available": false
-          }
-        ]
-      },
-      {
-        "name": "<body></body>",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          },
-          {
-            "date": "2022-02-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": true
           }
         ]
       }

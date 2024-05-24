@@ -67,6 +67,11 @@ export const toggleAttendanceModal = async (Id, action) => {
       modalContainer.remove();
     });
   }
+  modalContainer.addEventListener("click", (e) => {
+    if (e.target === modalContainer) {
+      modalContainer.remove();
+    }
+  });
   const addAttendant = document.querySelector("#add-attendant");
   addAttendant.addEventListener("click", (e) => {
     const nameInput = document.querySelector("#nameInput");
