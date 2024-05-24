@@ -73,7 +73,7 @@ export const toggleAttendanceModal = async (Id, action) => {
     if (action === "edit") {
       attendantName = participantName;
     } else {
-      attendantName = nameInput.value;
+      attendantName = nameInput.value.trim();
     }
     if (!attendantName) {
       alert("please fill out your name.");
