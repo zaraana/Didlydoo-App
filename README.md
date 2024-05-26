@@ -58,7 +58,7 @@ To launch the server simply type node server/index.mjs to start the server (the 
 <img width="45%"  alt="pic" src="assets/images/coding.gif"></img>
 </div>
 
-# 𝙷𝚘𝚠 𝚠𝚎 𝚖𝚊𝚗𝚊𝚐𝚎𝚍 𝚎𝚊𝚌𝚑 𝚝𝚊𝚜𝚔;
+# 𝙷𝚘𝚠 𝚠𝚎 𝚖𝚊𝚗𝚊𝚐𝚎𝚍 𝚎𝚊𝚌𝚑 𝚝𝚊𝚜𝚔
 
 ᴢᴀʜʀᴀ: <br>
 𝙵𝚛𝚘𝚗𝚝𝚎𝚗𝚍;
