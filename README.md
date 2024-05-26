@@ -1,5 +1,5 @@
 
-<div align="center"><img width="70%" alt="header" src="assets/images/header.png"></img></div>
+<div align="center"><img  alt="header" src="assets/images/header.png"></img></div>
   
 # 𝚃𝚊𝚋𝚕𝚎 𝚘𝚏 𝚌𝚘𝚗𝚝𝚎𝚗𝚝𝚜:
 * 𝙶𝚛𝚘𝚞𝚙 𝙼𝚎𝚖𝚋𝚎𝚛𝚜;
