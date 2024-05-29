@@ -25,36 +25,7 @@
             <button class="addEvent" id="add-event"title="ᴀᴅᴅ-ᴇᴠᴇɴᴛ"><i class="fa-solid fa-calendar-plus"></i></button>
     </div>
     <div id="fond-modal">
-            
-    </div>
-    <!-- ============================== add event modale ==============================  -->
-    <main>
-
-        
-
-        <div id="addEvent_modal" class="pinkdisign">
-            <label for="event_name">Event name : </label>
-            <input type="text" id="event_name" maxlength="30">
-
-            <label for="author">Author : </label>
-            <input type="text" id="author" maxlength="10">
-
-            <label for="dates">Dates of attendance : </label>
-            <input type="date" id="dates">
-            <button id="add_date">+</button>
-
-            <label for="description">description</label>
-            <textarea id="description" maxlength="256" rows="5" cols="33"></textarea>
-            <div id="liste_date">
-                
-            </div>
-            <button id="submit_addEvent" type="button">submit</button>
-        </div>
-<!-- ============================================ list des events ============================================ -->
-        <div class="events-container">
-            
-        </div>
-<!-- ============================== modify event modale ==============================  -->
+            <!-- ============================== modify event modale ==============================  -->
         <div id="modifyEvent" class="pinkdisign">
             <h2>modify info</h2>
             <label for="modif_name">Name:</label>
@@ -73,8 +44,37 @@
                 
             </div>
 
-            <button id="updateButton">submit</button>
+            <button id="updateButton">Submit</button>
         </div>
+        <!-- ============================== add event modale ==============================  -->
+        <div id="addEvent_modal" class="pinkdisign">
+            <label for="event_name">Event name : </label>
+            <input type="text" placeholder="Event Name" id="event_name" maxlength="30">
+    
+            <label for="author">Author : </label>
+            <input type="text" placeholder="Author name" id="author" maxlength="10">
+    
+            <label for="dates">Dates of attendance : </label>
+            <input type="date" id="dates">
+            <button id="add_date">+</button>
+    
+            <label for="description">Description</label>
+            <textarea placeholder="Event Description" id="description" maxlength="256" rows="5" cols="33"></textarea>
+            <div id="liste_date">
+                
+            </div>
+            <button id="submit_addEvent" type="button">Submit</button>
+        </div>
+    </div>
+    <main>
+
+        
+
+<!-- ============================================ list des events ============================================ -->
+        <div class="events-container">
+            
+        </div>
+
     </main>
 
     <footer>

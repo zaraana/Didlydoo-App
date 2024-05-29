@@ -138,14 +138,13 @@
 .sign-up {
     display:flex;
     justify-content:center;
-
 }
 
 .edit-participation {
     cursor: pointer;
 }
 
-.attend-button, #add-attendant {
+.attend-button, button, #add-attendant {
     font-weight:bold;
     margin: .8em 0;
     padding: 5px 10px;

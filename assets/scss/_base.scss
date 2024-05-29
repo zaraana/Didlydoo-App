@@ -8,18 +8,16 @@ body {
 }
 
 .darkMode{
+    transition: ease 0.5s;
     background: #38598b;
     color: white;
-
     header{
     background: #a2a8d3;
     }
-
     .card{
         background: #a2a8d3;
         border: 1px solid #2b456b;
     }
-
     main{
         button{
             background:#C7C8CC;
@@ -29,14 +27,11 @@ body {
         .edit-button {
             filter: brightness(0) saturate(100%);
             filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(60%) contrast(87%);
-
-
         }
         .delete-button {
             filter: brightness(0) saturate(100%);
             filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
         }
-
     }
     .event-info {
         color: #38598b;
@@ -44,7 +39,7 @@ body {
     .toggle-attendance {
         color : #07433c
     }
-    .attend-button {
+    .attend-button, button {
         background-color: #38598b;
         color: white;
     }
@@ -64,10 +59,10 @@ body {
         filter: invert(21%) sepia(19%) saturate(2191%) hue-rotate(126deg) brightness(50%) contrast(94%);
     }
 
-    .delete-modal {
+    .delete-modal, #modifyEvent, #addEvent_modal {
         background-color :#2b456b ;
         border: 1px solid  #a2a8d3;
-        input {
+        input, textarea, select {
             background-color: #a2a8d3 ;
             color:#2b456b ;
         }

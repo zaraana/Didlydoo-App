@@ -1,3 +1,8 @@
+#addEvent_modal, #modifyEvent {
+    display: none;
+    z-index:2;
+}
+
 .modal-container {
     display: flex;
     align-items: center;
@@ -16,7 +21,13 @@
 }
 
 .delete-modal {
+    display:flex;
+}
+
+.delete-modal, #modifyEvent, #addEvent_modal {
     max-width: 90%;
+    align-self: center;
+    justify-self:center;
     border-radius: 15px;
     border: 2px solid black;
     padding: .2em;
@@ -24,7 +35,6 @@
     background-color: white;
     height: fit-content;
     width: 400px;
-    display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -91,41 +101,76 @@
 
 main {
     div{
-        &#addEvent_modal{
-            display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
-            position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            z-index: 2;
-            align-items: center;
-            background-color: #242424;
-            border-radius: 15px;
-            box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
-            color: white;
-            width: 40vw;
-            height: 40vh;
-            @include mobile {
-                width: 90%;
-            }
+        // &#addEvent_modal{
+        //     display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
+        //     position: absolute;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     z-index: 2;
+        //     align-items: center;
+        //     background-color: #242424;
+        //     border-radius: 15px;
+        //     box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
+        //     color: white;
+        //     width: 40vw;
+        //     height: 40vh;
+        //     @include mobile {
+        //         width: 90%;
+        //     }
+        // }
+        // &#modifyEvent{
+        //     display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
+        //     position: absolute;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     background-color: white;
+        //     border-radius: 15px;
+        //     box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
+        //     color: white;
+        //     width: fit-content;
+        //     height: fit-content;
+        //     min-width: 40vw;
+        //     min-height: 40vh;
+        //     padding: 1vh 1vw;
+        //     z-index: 2;
+        //     @include mobile {
+        //         width: 90%;
+        //     }
+        // }
+    }
+}
+
+input[type="text"],input, select, textarea {
+    padding : 5px;
+    border-radius: 5px;
+}
+
+// input, select {
+//     padding : 5px;
+//     border-radius: 5px;
+// }
+
+
+#liste_date, #dates_added {
+    div {
+        display: flex;
+        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        p {
+            padding-right: 5px;
         }
-        &#modifyEvent{
-            display: none;// faut laisser!!! si tu veux changer le display vas dans add_event_modal.js
-            position: absolute;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #242424;
-            border-radius: 15px;
-            box-shadow: 8px 12px 35px 29px rgba(0,0,0,0.48);
-            color: white;
-            width: fit-content;
-            height: fit-content;
-            min-width: 40vw;
-            min-height: 40vh;
-            padding: 1vh 1vw;
-            z-index: 2;
-            @include mobile {
-                width: 90%;
+        button {
+            align-self: top;
+            padding: 0;
+            height: 20px;
+            width: 20px;
+            border: 0;
+            &:hover {
+                cursor: pointer;
             }
         }
     }
