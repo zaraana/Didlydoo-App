@@ -35,7 +35,20 @@
         "dates": [
           {
             "date": "2024-05-23",
+            "available": true
+          },
+          {
+            "date": "2024-05-24",
             "available": false
+          }
+        ]
+      },
+      {
+        "name": "Caroline",
+        "dates": [
+          {
+            "date": "2024-05-23",
+            "available": true
           },
           {
             "date": "2024-05-24",
@@ -135,7 +148,7 @@
           },
           {
             "date": "2022-03-12",
-            "available": false
+            "available": true
           }
         ]
       }

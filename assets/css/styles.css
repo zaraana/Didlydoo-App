@@ -3,6 +3,142 @@
   margin: 0;
 }
 
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.name-input {
+  margin-bottom: 20px;
+}
+
+.delete-modal {
+  max-width: 90%;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 0.2em;
+  min-height: 20vh;
+  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.top img {
+  width: 35px;
+  height: 35px;
+}
+.top img:hover {
+  transform: scale(110%);
+  cursor: pointer;
+}
+
+.delete-options {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30%;
+}
+.delete-options input {
+  padding: 5px 10px;
+  margin-bottom: 1em;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.delete-options input:hover {
+  transform: scale(110%);
+  cursor: pointer;
+}
+
+.dates {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+.dates > * {
+  display: flex;
+}
+.dates > * > * {
+  flex: 1;
+}
+.dates > * > *:first-child {
+  text-align: right;
+  padding-right: 1em;
+}
+
+#nameInput {
+  width: 150px;
+}
+
+.fond-modal {
+  display: none;
+}
+
+main div#addEvent_modal {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 15px;
+  box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
+  color: white;
+  width: 40vw;
+  height: 40vh;
+}
+@media screen and (max-width: 768px) {
+  main div#addEvent_modal {
+    width: 90%;
+  }
+}
+main div#modifyEvent {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 15px;
+  box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 40vw;
+  min-height: 40vh;
+  padding: 1vh 1vw;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  main div#modifyEvent {
+    width: 90%;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -21,9 +157,55 @@ body {
 }
 .darkMode .card {
   background: #a2a8d3;
+  border: 1px solid #2b456b;
 }
 .darkMode main button {
   background: #C7C8CC;
+}
+.darkMode .controls .edit-button {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(60%) contrast(87%);
+}
+.darkMode .controls .delete-button {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+}
+.darkMode .event-info {
+  color: #38598b;
+}
+.darkMode .toggle-attendance {
+  color: #07433c;
+}
+.darkMode .attend-button {
+  background-color: #38598b;
+  color: white;
+}
+.darkMode .edit-participation {
+  filter: brightness(0) saturate(100%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+}
+.darkMode .attendance {
+  filter: brightness(0) saturate(50%);
+  filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(100%) contrast(87%);
+}
+.darkMode .attendance .not-attending {
+  filter: invert(80%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(10%) contrast(87%);
+}
+.darkMode .attending {
+  filter: brightness(0) saturate(50%);
+  filter: invert(21%) sepia(19%) saturate(2191%) hue-rotate(126deg) brightness(50%) contrast(94%);
+}
+.darkMode .delete-modal {
+  background-color: #2b456b;
+  border: 1px solid #a2a8d3;
+}
+.darkMode .delete-modal input {
+  background-color: #a2a8d3;
+  color: #2b456b;
+}
+.darkMode img.close-modal {
+  filter: brightness(0) saturate(50%);
+  filter: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(855%) hue-rotate(195deg) brightness(95%) contrast(97%);
 }
 
 header {
@@ -80,6 +262,9 @@ main {
   flex-direction: column;
   align-items: center;
 }
+main div button {
+  border-radius: 15px;
+}
 main div#addEvent_modal {
   display: none;
   position: absolute;
@@ -91,8 +276,11 @@ main div#addEvent_modal {
   border-radius: 15px;
   box-shadow: 8px 12px 35px 29px rgba(0, 0, 0, 0.48);
   color: white;
-  width: 40vw;
-  height: 40vh;
+  min-width: 40vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 main div#modifyEvent {
   display: none;
@@ -116,6 +304,32 @@ main div#modifyEvent {
 
 .fond-modal {
   display: none;
+}
+
+.pinkdisign input {
+  background-color: #ee3a85;
+  outline-color: white;
+  border: none;
+  border-radius: 15px;
+}
+.pinkdisign button {
+  background-color: #ee3a85;
+  background-color: none;
+  border-radius: 15px;
+  margin: 1vh;
+  transition: 0.3s ease;
+}
+.pinkdisign button:hover {
+  transform: scale(1.4);
+  outline: blueviolet;
+}
+.pinkdisign textarea {
+  margin: 1vh 1vw;
+  min-height: 10vh;
+  min-width: 20vw;
+  border-radius: 15px;
+  background-color: #ee3a85;
+  outline-color: white;
 }
 
 footer {
@@ -271,6 +485,10 @@ footer {
   justify-content: center;
 }
 
+.edit-participation {
+  cursor: pointer;
+}
+
 .attend-button, #add-attendant {
   font-weight: bold;
   margin: 0.8em 0;
@@ -283,92 +501,4 @@ footer {
 .attend-button:hover, #add-attendant:hover {
   transform: scale(105%);
   transition: ease 0.5s;
-}
-
-.modal-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  box-sizing: border-box;
-}
-
-.name-input {
-  margin-bottom: 20px;
-}
-
-.delete-modal {
-  max-width: 90%;
-  border-radius: 15px;
-  border: 2px solid black;
-  padding: 0.2em;
-  min-height: 20vh;
-  background-color: white;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.top {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
-.top img {
-  width: 35px;
-  height: 35px;
-}
-.top img:hover {
-  transform: scale(110%);
-  cursor: pointer;
-}
-
-.delete-options {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 30%;
-}
-.delete-options input {
-  padding: 5px 10px;
-  margin-bottom: 1em;
-  background-color: white;
-  border-radius: 5px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-}
-.delete-options input:hover {
-  transform: scale(110%);
-  cursor: pointer;
-}
-
-.dates {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  margin-bottom: 1em;
-}
-.dates > * {
-  display: flex;
-}
-.dates > * > * {
-  flex: 1;
-}
-.dates > * > *:first-child {
-  text-align: right;
-  padding-right: 1em;
-}
-
-#nameInput {
-  width: 150px;
 }/*# sourceMappingURL=styles.css.map */

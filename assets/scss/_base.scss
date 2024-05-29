@@ -17,11 +17,63 @@ body {
 
     .card{
         background: #a2a8d3;
+        border: 1px solid #2b456b;
     }
 
     main{
         button{
             background:#C7C8CC;
         }
+    }
+    .controls {
+        .edit-button {
+            filter: brightness(0) saturate(100%);
+            filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(60%) contrast(87%);
+
+
+        }
+        .delete-button {
+            filter: brightness(0) saturate(100%);
+            filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+        }
+
+    }
+    .event-info {
+        color: #38598b;
+    }
+    .toggle-attendance {
+        color : #07433c
+    }
+    .attend-button {
+        background-color: #38598b;
+        color: white;
+    }
+    .edit-participation {
+        filter: brightness(0) saturate(100%);
+        filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(50%) contrast(87%);
+    }
+    .attendance {
+        filter: brightness(0) saturate(50%);
+        filter: invert(5%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(100%) contrast(87%);
+        .not-attending {
+            filter: invert(80%) sepia(87%) saturate(419%) hue-rotate(176deg) brightness(10%) contrast(87%);
+        }
+    }
+    .attending {
+        filter: brightness(0) saturate(50%);
+        filter: invert(21%) sepia(19%) saturate(2191%) hue-rotate(126deg) brightness(50%) contrast(94%);
+    }
+
+    .delete-modal {
+        background-color :#2b456b ;
+        border: 1px solid  #a2a8d3;
+        input {
+            background-color: #a2a8d3 ;
+            color:#2b456b ;
+        }
+    }
+    img.close-modal {
+        filter: brightness(0) saturate(50%);
+        filter: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(855%) hue-rotate(195deg) brightness(95%) contrast(97%);
     }
 }
