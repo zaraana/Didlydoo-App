@@ -30,6 +30,12 @@ export function modifModal(id, prefill) {
   modifName.value = prefill[0].name;
   modifAuthor.value = prefill[0].author;
   modifDescription.value = prefill[0].description;
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const formattedDate = `${year}-${month}-${day}`;
+  add_datesInput.setAttribute("min", formattedDate);
 
   let tab_newDate = [];
 
