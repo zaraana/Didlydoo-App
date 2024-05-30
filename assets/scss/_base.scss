@@ -71,4 +71,12 @@ body {
         filter: brightness(0) saturate(50%);
         filter: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(855%) hue-rotate(195deg) brightness(95%) contrast(97%);
     }
+    .popular {
+        .col-title {
+            border: 1px solid #a2a8d3;
+            background-color: rgb(212, 234, 250);
+            color: #2b456b;
+        }
+    }
+    
 }

@@ -105,6 +105,10 @@
   display: none;
 }
 
+textarea {
+  max-width: 90%;
+}
+
 input[type=text], input, select, textarea {
   padding: 5px;
   border-radius: 5px;
@@ -201,6 +205,11 @@ body {
   filter: brightness(0) saturate(50%);
   filter: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(855%) hue-rotate(195deg) brightness(95%) contrast(97%);
 }
+.darkMode .popular .col-title {
+  border: 1px solid #a2a8d3;
+  background-color: rgb(212, 234, 250);
+  color: #2b456b;
+}
 
 header {
   display: flex;
@@ -296,6 +305,12 @@ footer {
   word-break: normal;
 }
 
+.popular .col-title {
+  border: 1px solid rgb(175, 224, 175);
+  border-radius: 10px;
+  background-color: rgb(203, 234, 203);
+}
+
 .card-title {
   display: flex;
   flex-direction: row;
@@ -340,6 +355,7 @@ footer {
 
 .col-title {
   height: 60px;
+  padding: 0 3px;
   border-bottom: 1px solid rgb(206, 206, 206);
 }
 

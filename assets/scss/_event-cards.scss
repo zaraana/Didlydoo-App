@@ -26,6 +26,15 @@
     }
 }
 
+.popular {
+    .col-title {
+        border: 1px solid rgb(175, 224, 175);
+        border-radius:10px;
+        background-color: rgb(203, 234, 203);
+    }
+}
+
+
 .card-title {
     display: flex;
     flex-direction: row;
@@ -70,6 +79,7 @@
 
 .col-title {
     height: 60px;
+    padding: 0 3px;
     border-bottom: 1px solid rgb(206, 206, 206);
 }
 

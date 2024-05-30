@@ -16,7 +16,6 @@ export const getEvents = async () => {
 // x aggiungere presenze
 const getAttendantsList = (dateList) => {
   // set x display nome persona + edit
-  // console.log(attendeesSet);
   let attendeesSet = new Set();
   for (let date of dateList) {
     date.attendees.forEach((attendee) => attendeesSet.add(attendee.name));
@@ -36,11 +35,33 @@ const toggleDetails = (id) => {
   }
 };
 
+const findPopularDates = (datesArr) => {
+  // Stores the count of attendees for each event Date :
+  let attendancePerDate = [];
+  for (let date of datesArr) {
+    let attendeesCount = 0;
+    for (let attendant of date.attendees) {
+      if (attendant.available) {
+        attendeesCount++;
+      }
+    }
+    attendancePerDate.push({ date: date.date, attendees: attendeesCount });
+  }
+  const maxAttendees = Math.max(
+    ...attendancePerDate.map((event) => event.attendees)
+  );
+  const popularDates = attendancePerDate.filter(
+    (event) => event.attendees === maxAttendees
+  );
+  return popularDates;
+};
+
 const displayEvents = (events) => {
   // console.log(events); x vedere cm a ripreso i dati
   const container = document.querySelector(".events-container");
   container.innerHTML = "";
   for (let event of events) {
+    const popularDates = findPopularDates(event.dates);
     const card = document.createElement("div");
     card.classList.add("card");
     const createdDate = formatDate(event.created_at);
@@ -81,6 +102,12 @@ const displayEvents = (events) => {
       month = dateElems[2];
       year = dateElems[3];
       const dateDiv = document.createElement("div");
+      // Checks if the date is one of those with most attendees to style accordingly
+      let obj = popularDates.find((o) => o.date === eventDate.date);
+      if (obj) {
+        dateDiv.classList.add("popular");
+      }
+
       dateDiv.classList.add("date-attendance");
       dateDiv.innerHTML = `<span class="date col-title"><span>${day}</span><span>${month}</span><span>${year}</span></span>`;
       attendanceTable.appendChild(dateDiv);
