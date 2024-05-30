@@ -22,6 +22,9 @@
 
 .delete-modal {
     display:flex;
+    p {
+        text-align: center;
+    }
 }
 
 .delete-modal, #modifyEvent, #addEvent_modal {

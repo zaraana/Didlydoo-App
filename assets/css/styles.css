@@ -28,6 +28,9 @@
 .delete-modal {
   display: flex;
 }
+.delete-modal p {
+  text-align: center;
+}
 
 .delete-modal, #modifyEvent, #addEvent_modal {
   max-width: 90%;
