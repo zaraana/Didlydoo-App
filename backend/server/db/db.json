@@ -96,11 +96,11 @@
           },
           {
             "date": "2022-03-18",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-21",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-22",
@@ -131,6 +131,22 @@
         "dates": [
           {
             "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
             "available": true
           }
         ]
